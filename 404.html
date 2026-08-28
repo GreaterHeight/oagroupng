@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en-NG" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Page Not Found — OA Group</title>
+  <meta name="description" content="The page you're looking for doesn't exist. Return to OA Group's homepage or explore our companies and services.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://www.oagroupng.com/404.html">
+  <link rel="alternate" hreflang="en-ng" href="https://www.oagroupng.com/404.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.oagroupng.com/404.html">
+  <meta property="og:title" content="Page Not Found — OA Group">
+  <meta property="og:description" content="The page you're looking for doesn't exist. Return to OA Group's homepage.">
+  <meta property="og:site_name" content="OA Group">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/variables.css">
+  <link rel="stylesheet" href="/css/animations.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+
+  <style>
+    .error-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .error-page__main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-20) var(--space-6);
+      background: linear-gradient(160deg, #F8F9FC 0%, #EEF0F6 100%);
+    }
+    .error-page__inner {
+      max-width: 680px;
+      width: 100%;
+      text-align: center;
+    }
+    .error-page__code {
+      font-size: clamp(7rem, 18vw, 12rem);
+      font-family: var(--font-display);
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: -0.04em;
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: var(--space-4);
+      user-select: none;
+    }
+    .error-page__title {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 4vw, 2.25rem);
+      font-weight: 600;
+      color: var(--color-text-primary);
+      margin-bottom: var(--space-4);
+    }
+    .error-page__message {
+      font-size: 1.0625rem;
+      color: var(--color-text-secondary);
+      line-height: 1.7;
+      margin-bottom: var(--space-10);
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .error-page__actions {
+      display: flex;
+      gap: var(--space-4);
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: var(--space-14);
+    }
+    .error-page__divider {
+      width: 40px;
+      height: 2px;
+      background: var(--color-border);
+      margin: 0 auto var(--space-8);
+    }
+    .error-page__links-label {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-text-tertiary);
+      margin-bottom: var(--space-5);
+    }
+    .error-page__quick-links {
+      display: flex;
+      gap: var(--space-3);
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .error-page__quick-link {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      padding: var(--space-2) var(--space-4);
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-full);
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--color-text-primary);
+      text-decoration: none;
+      transition: border-color var(--transition-fast), box-shadow var(--transition-fast), color var(--transition-fast);
+    }
+    .error-page__quick-link:hover {
+      border-color: var(--color-primary);
+      color: var(--color-primary);
+      box-shadow: 0 2px 8px rgba(92,108,148,0.12);
+    }
+    .error-page__quick-link svg {
+      flex-shrink: 0;
+      opacity: 0.5;
+    }
+    /* Entity pill strip */
+    .error-page__entities {
+      display: flex;
+      gap: var(--space-2);
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: var(--space-10);
+      padding-top: var(--space-10);
+      border-top: 1px solid var(--color-border);
+    }
+    .error-entity-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      padding: var(--space-1-5) var(--space-3);
+      background: var(--color-white);
+      border-radius: var(--radius-full);
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--color-text-secondary);
+      text-decoration: none;
+      border: 1px solid var(--color-border);
+      transition: opacity var(--transition-fast);
+    }
+    .error-entity-pill:hover { opacity: 0.75; }
+    .error-entity-pill__dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    @media (max-width: 480px) {
+      .error-page__actions { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+
+<body class="error-page">
+
+  <!-- SKIP LINK -->
+  <a href="#error-main" class="skip-link">Skip to main content</a>
+
+  <!-- HEADER / NAV -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="/" class="nav__logo" aria-label="OA Group Home">
+          <div class="nav__logo-mark" aria-hidden="true">OA</div>
+          <div class="nav__logo-text">
+            <span class="nav__logo-name">OA Group</span>
+            <span class="nav__logo-tagline">Integrated Professional Services</span>
+          </div>
+        </a>
+
+        <button class="nav__hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
+          <span class="nav__hamburger-bar"></span>
+          <span class="nav__hamburger-bar"></span>
+          <span class="nav__hamburger-bar"></span>
+        </button>
+
+        <ul class="nav__menu" id="navMenu" role="list">
+          <li class="nav__item"><a href="/" class="nav__link">Home</a></li>
+          <li class="nav__item nav__item--has-dropdown">
+            <button class="nav__link nav__dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+              About <svg class="nav__chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <ul class="nav__dropdown" role="list">
+              <li><a href="/about/" class="nav__dropdown-link">Our Story</a></li>
+              <li><a href="/about/#leadership" class="nav__dropdown-link">Leadership</a></li>
+              <li><a href="/about/#values" class="nav__dropdown-link">Values</a></li>
+            </ul>
+          </li>
+          <li class="nav__item nav__item--has-dropdown">
+            <button class="nav__link nav__dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+              Companies <svg class="nav__chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <ul class="nav__dropdown" role="list">
+              <li><a href="/companies/" class="nav__dropdown-link">All Companies</a></li>
+              <li><a href="https://olusola-adekanola.oagroupng.com" class="nav__dropdown-link" data-status="coming-soon" target="_blank" rel="noopener noreferrer">OA &amp; Co</a></li>
+              <li><a href="https://oaconsulting.oagroupng.com" class="nav__dropdown-link" data-status="coming-soon" target="_blank" rel="noopener noreferrer">OA Consulting</a></li>
+              <li><a href="https://henrisol.oagroupng.com" class="nav__dropdown-link" data-status="coming-soon" target="_blank" rel="noopener noreferrer">Henrisol Properties</a></li>
+              <li><a href="https://mol.oagroupng.com" class="nav__dropdown-link" data-status="coming-soon" target="_blank" rel="noopener noreferrer">Maria Oyinlola Ltd</a></li>
+              <li><a href="https://pearlprimus.oagroupng.com" class="nav__dropdown-link" data-status="coming-soon" target="_blank" rel="noopener noreferrer">Pearl Primus</a></li>
+            </ul>
+          </li>
+          <li class="nav__item"><a href="/services/" class="nav__link">Services</a></li>
+          <li class="nav__item"><a href="/blog/" class="nav__link">Insights</a></li>
+          <li class="nav__item"><a href="/contact/" class="nav__link nav__link--cta">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="error-page__main" id="error-main" tabindex="-1">
+    <div class="error-page__inner reveal-on-scroll">
+
+      <div class="error-page__code" aria-label="Error 404">404</div>
+
+      <h1 class="error-page__title">Page Not Found</h1>
+
+      <p class="error-page__message">
+        The page you're looking for may have been moved, renamed, or no longer exists.
+        Let's get you back to where you need to be.
+      </p>
+
+      <div class="error-page__actions">
+        <a href="/" class="btn btn--primary btn--lg">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Back to Homepage
+        </a>
+        <a href="/contact/" class="btn btn--outline btn--lg">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+          Contact Us
+        </a>
+      </div>
+
+      <div class="error-page__divider" aria-hidden="true"></div>
+
+      <p class="error-page__links-label">Or explore these pages</p>
+
+      <nav class="error-page__quick-links" aria-label="Quick navigation links">
+        <a href="/about/" class="error-page__quick-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4m0 4h.01"/></svg>
+          About OA Group
+        </a>
+        <a href="/companies/" class="error-page__quick-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-4 0v2M8 7V5a2 2 0 00-4 0v2"/></svg>
+          Our Companies
+        </a>
+        <a href="/services/" class="error-page__quick-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          Services
+        </a>
+        <a href="/blog/" class="error-page__quick-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          Insights
+        </a>
+        <a href="/faq/" class="error-page__quick-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3M12 17h.01"/></svg>
+          FAQ
+        </a>
+      </nav>
+
+      <!-- Entity strip -->
+      <div class="error-page__entities" role="navigation" aria-label="Our companies">
+        <a href="https://olusola-adekanola.oagroupng.com" class="error-entity-pill" data-status="coming-soon" target="_blank" rel="noopener noreferrer">
+          <span class="error-entity-pill__dot" style="background:#00145A;" aria-hidden="true"></span>
+          OA &amp; Co
+        </a>
+        <a href="https://oaconsulting.oagroupng.com" class="error-entity-pill" data-status="coming-soon" target="_blank" rel="noopener noreferrer">
+          <span class="error-entity-pill__dot" style="background:#3D4761;" aria-hidden="true"></span>
+          OA Consulting
+        </a>
+        <a href="https://henrisol.oagroupng.com" class="error-entity-pill" data-status="coming-soon" target="_blank" rel="noopener noreferrer">
+          <span class="error-entity-pill__dot" style="background:#6E4687;" aria-hidden="true"></span>
+          Henrisol Properties
+        </a>
+        <a href="https://mol.oagroupng.com" class="error-entity-pill" data-status="coming-soon" target="_blank" rel="noopener noreferrer">
+          <span class="error-entity-pill__dot" style="background:#FF6E32;" aria-hidden="true"></span>
+          Maria Oyinlola Ltd
+        </a>
+        <a href="https://pearlprimus.oagroupng.com" class="error-entity-pill" data-status="coming-soon" target="_blank" rel="noopener noreferrer">
+          <span class="error-entity-pill__dot" style="background:#14344C;" aria-hidden="true"></span>
+          Pearl Primus
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2025 OA Group. All rights reserved. Developed by <a href="#" style="color: rgba(255,255,255,0.5);">GreaterHeight Technologies</a></p>
+        <nav class="footer__socials" aria-label="Social media links">
+          <a href="#" class="footer__social" aria-label="OA Group on LinkedIn" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="#" class="footer__social" aria-label="OA Group on X (Twitter)" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="/js/navigation.js" defer></script>
+  <script src="/js/main.js" defer></script>
+</body>
+</html>

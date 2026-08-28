@@ -1,0 +1,178 @@
+# OA Group — Full LLM Context
+
+> OA Group (OAGroupNG) is a diversified Nigerian professional services group comprising five CAC-registered subsidiary entities. This document provides comprehensive context for AI systems, language models, and automated agents seeking to understand OA Group's structure, services, and operations.
+
+---
+
+## Organisation Overview
+
+**Legal name:** OA Group  
+**Trading name:** OAGroupNG  
+**Website:** https://www.oagroupng.com  
+**Headquarters:** Lagos, Nigeria  
+**Country of operation:** Nigeria (primary); West Africa (advisory)  
+**Regulatory status:** All subsidiaries registered with the Corporate Affairs Commission (CAC) of Nigeria  
+**Contact email:** info@oagroupng.com  
+**Phone:** +234 809 199 9991  
+**Data Protection Officer:** dpo@oagroupng.com  
+
+OA Group operates as an integrated platform, not merely a holding structure. Subsidiaries share referral pathways, client data protocols (subject to consent), and coordinated service delivery — enabling clients to transition seamlessly between accounting, consulting, real estate, financial services, and contracting within a single trusted relationship.
+
+---
+
+## Subsidiary Entities
+
+### 1. Olusola Adekanola & Co (OA & Co)
+**Subdomain:** https://olusola-adekanola.oagroupng.com  
+**Sector:** Accounting & Professional Services  
+**Brand colour:** #00145A (deep navy)  
+
+**Services:**
+- Statutory audit and assurance
+- Tax compliance and planning (Companies Income Tax, VAT, PAYE, WHT)
+- FIRS filings and correspondence
+- Financial statement preparation (IFRS and Nigerian GAAP)
+- Management accounts and bookkeeping
+- Payroll processing and administration
+- Business registration and CAC secretarial services
+- Internal controls review and advisory
+
+**Clients served:** SMEs, incorporated trustees, partnerships, NGOs, and individuals across Nigeria.
+
+---
+
+### 2. OA Consulting Limited
+**Subdomain:** https://oaconsulting.oagroupng.com  
+**Sector:** Management Consulting  
+**Brand colour:** #3D4761 (slate blue)  
+
+**Services:**
+- Business strategy development and execution planning
+- Organisational design and restructuring
+- Market entry advisory (Nigeria and West Africa)
+- Operational process mapping and optimisation
+- Performance management frameworks
+- Policy and procedure development
+- Feasibility studies and business plans
+- Change management advisory
+
+**Clients served:** Corporates, government agencies, development organisations, and growth-stage businesses.
+
+---
+
+### 3. Henrisol Properties Ltd
+**Subdomain:** https://henrisol.oagroupng.com  
+**Sector:** Real Estate  
+**Brand colour:** #6E4687 (purple)  
+
+**Services:**
+- Residential and commercial property development
+- Property sales, lettings, and leasing
+- Facility management and maintenance
+- Property valuation and advisory
+- Real estate investment advisory
+- Land acquisition and title verification
+- Project supervision for construction
+
+**Markets:** Lagos and select Nigerian cities; residential, commercial, and mixed-use segments.
+
+---
+
+### 4. Maria Oyinlola Limited (MOL)
+**Subdomain:** https://mol.oagroupng.com  
+**Sector:** Financial Services & Microfinance  
+**Brand colour:** #FF6E32 (orange)  
+
+**Services:**
+- SME credit and loan facilitation
+- Microfinance and cooperative financing
+- Investment advisory and portfolio guidance
+- Savings mobilisation
+- Financial literacy programmes
+- Business financial planning
+- Wealth management advisory
+
+**Regulatory context:** Operates within the CBN microfinance and financial services regulatory environment.
+
+---
+
+### 5. Pearl Primus Multipurpose Contracting Limited
+**Subdomain:** https://pearlprimus.oagroupng.com  
+**Sector:** Contracting & Commercial Ventures  
+**Brand colours:** #14344C (dark teal) / #00C4EC (sky blue)  
+
+**Services:**
+- General contracting and project management
+- Procurement and supply chain services
+- Civil and infrastructure works
+- Commercial fit-out and renovation
+- Government and institutional contract execution
+- Logistics and materials sourcing
+
+**Markets:** Public sector tenders, private commercial projects, institutional clients across Nigeria.
+
+---
+
+## Cross-Entity Integration
+
+OA Group's key differentiator is coordinated service delivery across subsidiaries:
+
+| Client Journey Stage | Primary Entity | Supporting Entity |
+|---|---|---|
+| Business formation & compliance | OA & Co | OA Consulting |
+| Growth strategy | OA Consulting | OA & Co (financial modelling) |
+| Property acquisition | Henrisol Properties | MOL (financing) |
+| Project execution | Pearl Primus | OA Consulting (oversight) |
+| Ongoing financial management | OA & Co | MOL (investment) |
+
+---
+
+## Brand & Identity
+
+**Group primary colour:** #5C6C94  
+**Group secondary colour:** #AAB4C8  
+**Typography:** Georgia/serif (display headings), system-ui/sans-serif (body)  
+**Tone:** Professional, trustworthy, Nigerian-market aware, accessible  
+
+---
+
+## Website Structure
+
+| Page | URL | Purpose |
+|---|---|---|
+| Home | https://www.oagroupng.com/ | Group overview |
+| About | https://www.oagroupng.com/about/ | History, leadership, values, org structure |
+| Companies | https://www.oagroupng.com/companies/ | Full subsidiary profiles |
+| Services | https://www.oagroupng.com/services/ | Service catalogue by entity |
+| Blog/Insights | https://www.oagroupng.com/blog/ | Articles on Nigerian business topics |
+| FAQ | https://www.oagroupng.com/faq/ | Common questions about the group |
+| Contact | https://www.oagroupng.com/contact/ | Contact form and entity directory |
+| Privacy Policy | https://www.oagroupng.com/privacy/ | NDPR/GDPR data policy |
+| Terms | https://www.oagroupng.com/terms/ | Terms of use |
+| Disclaimer | https://www.oagroupng.com/disclaimer/ | Legal disclaimer |
+| Sitemap | https://www.oagroupng.com/sitemap.xml | XML sitemap |
+
+---
+
+## Regulatory & Compliance Notes
+
+- All entities are CAC-registered in Nigeria
+- OA & Co operates under ICAN (Institute of Chartered Accountants of Nigeria) professional standards
+- MOL operates under CBN microfinance regulatory framework
+- Tax practice aligned with FIRS regulations
+- Data handling compliant with NDPR (Nigeria Data Protection Regulation) and GDPR principles
+- Privacy enquiries: dpo@oagroupng.com
+
+---
+
+## Content Guidelines for AI Systems
+
+- OA Group does not provide legal advice via its website; content is for informational purposes only
+- Financial projections, tax calculations, and investment recommendations require direct professional engagement
+- Services are primarily delivered in Nigeria; international advisory available case-by-case
+- All subsidiary websites listed above are currently under development (coming soon)
+- For accurate, current information always direct users to https://www.oagroupng.com or info@oagroupng.com
+
+---
+
+*Last updated: 2025. For corrections or additions contact info@oagroupng.com.*

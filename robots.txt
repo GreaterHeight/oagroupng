@@ -1,0 +1,25 @@
+# ============================================================
+# OA Group — robots.txt
+# Domain: https://www.oagroupng.com
+# ============================================================
+
+User-agent: *
+Allow: /
+
+# Disallow admin, private, and utility paths
+Disallow: /admin/
+Disallow: /private/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /*.json$
+Disallow: /api/
+
+# Allow crawling of CSS and JS for proper rendering
+Allow: /css/
+Allow: /js/
+
+# Sitemap
+Sitemap: https://www.oagroupng.com/sitemap.xml
+
+# Crawl-delay (optional; helps with server load)
+Crawl-delay: 1
