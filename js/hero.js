@@ -1,3 +1,4 @@
+/* v4.1 poster fallback */
 document.addEventListener('DOMContentLoaded',()=>{
   const video=document.querySelector('[data-hero-video]');
   const toggle=document.querySelector('[data-hero-video-toggle]');
@@ -13,6 +14,15 @@ document.addEventListener('DOMContentLoaded',()=>{
       toggle.setAttribute('aria-pressed','false');
     }
   };
+  /* v4.1 poster fallback: poster is not an <img>, so verify it separately. */
+  const poster = video.getAttribute('poster');
+  const heroSection = video.closest('.hero');
+  if (poster && heroSection) {
+    const probe = new Image();
+    probe.onload = () => heroSection.classList.remove('hero--poster-missing');
+    probe.onerror = () => heroSection.classList.add('hero--poster-missing');
+    probe.src = poster;
+  }
   if(reduced.matches)video.pause();
   toggle.addEventListener('click',()=>{
     if(video.paused){
