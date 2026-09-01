@@ -1,10 +1,46 @@
-document.addEventListener('DOMContentLoaded',()=>{const form=document.querySelector('#search-form'),input=document.querySelector('#search-input'),results=document.querySelector('#search-results'),status=document.querySelector('#search-status');const data=[
-['What Nigeria’s 2025 Tax Reform Means for SMEs','Professional Services','/insights/what-nigerias-2025-tax-reform-means-for-smes/','How changing tax rules should translate into practical planning questions for Nigerian SMEs.'],
-['How to Recover Lost Revenue: A Practical Guide for Nigerian Businesses','Consulting & Advisory','/insights/recover-lost-revenue-nigerian-businesses/','Revenue leakage is rarely one problem.'],
-['Diaspora Real Estate Investment: A 2025 Guide for Nigerians Abroad','Real Estate','/insights/diaspora-real-estate-investment-nigeria/','Property decisions depend on trust, verification, financing and management.'],
-['Agency Banking as a Business Model: Opportunities in Nigeria’s Underbanked Market','Financial Services','/insights/agency-banking-business-model-nigeria/','Agency banking can extend financial access while creating new commercial models.'],
-['How to Win Federal Government Contracts in Nigeria','Contracting','/insights/win-federal-government-contracts-nigeria/','Government contracting rewards preparation and procurement readiness.'],
-['The OA Group Integrated Approach: Why One Group Can Serve the Whole Business Lifecycle','Group Insights','/insights/oa-group-integrated-approach/','Specialist capabilities can remain distinct while being coordinated around the client’s wider problem.'],
-['Internal Controls vs External Audit: What Every Nigerian CEO Must Understand','Professional Services','/insights/internal-controls-vs-external-audit/','Internal controls and external audit answer different questions.'],
-['Property Yield vs Capital Appreciation: Making the Right Investment Choice in Nigeria','Real Estate','/insights/property-yield-vs-capital-appreciation/','Assess recurring income and long-term value growth against investor objectives.']];
-function render(q){const term=q.trim().toLowerCase();const matches=term?data.filter(x=>x.join(' ').toLowerCase().includes(term)):data;status.textContent=term?`${matches.length} result${matches.length===1?'':'s'} for “${q}”`:'Featured insights';results.innerHTML=matches.map(x=>`<article class="insight-card"><div class="insight-card__body"><div class="card-meta"><span>${x[1]}</span></div><h3>${x[0]}</h3><p class="muted">${x[3]}</p><a class="company-card__link" href="${x[2]}">Read Full Article →</a></div></article>`).join('')||'<p>No matching group insight was found. Try a broader phrase or start a conversation with OA Group.</p>'}form.addEventListener('submit',e=>{e.preventDefault();const q=input.value;history.replaceState({},'',q?'?q='+encodeURIComponent(q):location.pathname);render(q)});const q=new URLSearchParams(location.search).get('q')||'';input.value=q;render(q)});
+document.addEventListener('DOMContentLoaded',()=>{
+  const form=document.querySelector('#search-form');
+  const input=document.querySelector('#search-input');
+  const results=document.querySelector('#search-results');
+  const status=document.querySelector('#search-status');
+  if(!form||!input||!results||!status||!Array.isArray(window.OA_SEARCH_INDEX))return;
+
+  const index=window.OA_SEARCH_INDEX.map(item=>({...item,haystack:`${item.title} ${item.type} ${item.description} ${item.content}`.toLowerCase()}));
+  const escapeHtml=value=>String(value).replace(/[&<>'"]/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[ch]));
+  const tokenize=q=>q.toLowerCase().trim().split(/[^a-z0-9]+/).filter(t=>t.length>1);
+  const score=(item,tokens)=>tokens.reduce((total,token)=>{
+    let n=0;
+    if(item.title.toLowerCase().includes(token))n+=12;
+    if(item.type.toLowerCase().includes(token))n+=5;
+    if(item.description.toLowerCase().includes(token))n+=7;
+    n+=Math.min((item.content.toLowerCase().match(new RegExp(token.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'g'))||[]).length,8);
+    return total+n;
+  },0);
+  const render=(query,initial=false)=>{
+    const tokens=tokenize(query);
+    let matches=index.filter(item=>tokens.every(token=>item.haystack.includes(token)));
+    if(tokens.length)matches=matches.map(item=>({...item,_score:score(item,tokens)})).sort((a,b)=>b._score-a._score);
+    else matches=index.slice().sort((a,b)=>a.type.localeCompare(b.type)||a.title.localeCompare(b.title)).slice(0,8);
+    status.textContent=tokens.length?`${matches.length} result${matches.length===1?'':'s'} for “${query.trim()}”`:'Explore site content';
+    results.replaceChildren();
+    if(!matches.length){
+      const p=document.createElement('p');p.className='muted';p.textContent='No matching OA Group content was found. Try a broader phrase or explore the site navigation.';results.append(p);return;
+    }
+    const frag=document.createDocumentFragment();
+    matches.forEach(item=>{
+      const article=document.createElement('article');article.className='insight-card search-result-card';
+      const body=document.createElement('div');body.className='insight-card__body';
+      const meta=document.createElement('div');meta.className='card-meta';
+      const type=document.createElement('span');type.textContent=item.type;meta.append(type);
+      const h=document.createElement('h3');h.textContent=item.title;
+      const p=document.createElement('p');p.className='muted';p.textContent=item.description||item.content.slice(0,220)+'…';
+      const a=document.createElement('a');a.className='company-card__link';a.href=item.url;a.textContent='Open →';
+      body.append(meta,h,p,a);article.append(body);frag.append(article);
+    });
+    results.append(frag);
+  };
+  const submit=query=>{const clean=query.trim();const url=clean?`${location.pathname}?q=${encodeURIComponent(clean)}`:location.pathname;history.replaceState({},'',url);render(clean)};
+  form.addEventListener('submit',e=>{e.preventDefault();submit(input.value)});
+  input.addEventListener('input',()=>{if(!input.value.trim())submit('')});
+  const q=new URLSearchParams(location.search).get('q')||'';input.value=q;render(q,true);
+});

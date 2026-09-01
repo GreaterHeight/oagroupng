@@ -18,3 +18,13 @@ Replace or verify any company-specific regulatory, professional-affiliation, reg
 
 ## Content / image handoff
 Use `IMAGE-PLACEMENT-MAP.md` to replace the supplied SVG editorial placeholders with commissioned photography. Keep the `.arch-frame` wrappers and descriptive alt text.
+
+
+## v3.1 Website Updates
+
+- The homepage hero now uses a local muted, looping OA Group motion video at `videos/oagroup-hero.mp4`, with `images/hero-video-poster.jpg` as the fallback poster. The motion is original branded artwork and is not copied from the PwC site.
+- The homepage includes an accessible Play/Pause Motion control and disables the background video for users who prefer reduced motion.
+- Site search is fully client-side and searches the indexed text of all public HTML pages, including Insight articles, company information, solutions, industries, careers, FAQ and policy pages.
+- Search is available from the primary navigation and `/search/`.
+- Cookie actions are presented vertically.
+- The footer newsletter Subscribe button is displayed below the email field.
