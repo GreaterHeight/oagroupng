@@ -38,3 +38,27 @@ document.addEventListener("DOMContentLoaded",()=>{
     window.location.href=`mailto:info@oagroupng.com?subject=${subject}&body=${body}`;
   }));
 });
+
+/* v3.7.3 — Insights article cards */
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".insight-card").forEach(function (card) {
+    var link = card.querySelector('a[href^="/insights/"]');
+    if (!link) return;
+    var href = link.getAttribute("href");
+    if (!href) return;
+
+    card.setAttribute("data-detail-link", href);
+    card.setAttribute("tabindex", "0");
+    card.addEventListener("click", function (event) {
+      if (event.target.closest("a, button, input, select, textarea")) return;
+      window.location.href = href;
+    });
+    card.addEventListener("keydown", function (event) {
+      if ((event.key === "Enter" || event.key === " ") &&
+          !event.target.closest("a, button, input, select, textarea")) {
+        event.preventDefault();
+        window.location.href = href;
+      }
+    });
+  });
+});

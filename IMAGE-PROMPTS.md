@@ -23,7 +23,7 @@ Use an editorial/institutional visual language rather than generic corporate sto
 
 # 2. SITE-WIDE BRAND ASSET
 
-### `/images/OAGroup-logo.png`
+### `/images/OAGroup-logo.png` (1.91:1 master (1200×630))
 **Placement:** Header and footer on every page.
 
 **Production instruction:** Approved supplied brand asset. Do not regenerate, recolour, redraw, distort or replace.
@@ -34,7 +34,7 @@ Use an editorial/institutional visual language rather than generic corporate sto
 
 ## 3.1 Hero video
 
-### `/videos/oagroup-hero.mp4`
+### `/videos/oagroup-hero.mp4` (16:9 master)
 **Placement:** Full-bleed homepage hero background.
 
 **Generation prompt:**
@@ -56,7 +56,7 @@ Subtly reflect the OA Group visual language through `#5C6C94`, `#AAB4C8`, `#4A4A
 
 ## 3.2 Hero poster
 
-### `/images/hero-video-poster.jpg`
+### `/images/hero-video-poster.jpg` (16:9 master)
 **Placement:** Video poster/fallback and reduced-motion fallback.
 
 **Generation prompt:**
@@ -74,17 +74,17 @@ Subtly use OA Group's approved palette: `#5C6C94`, `#AAB4C8`, `#4A4A4A`, `#FFFFF
 
 ## 3.3 Homepage Insight cards
 
-### `/images/insight-tax-reform.jpg`
+### `/images/insight-tax-reform.jpg` (1.91:1 master (1200×630))
 **Placement:** Homepage Insight card for the tax-reform article.
 
 **Generation prompt:** Create a premium editorial photograph of a Nigerian SME leadership team in a modern Lagos office reviewing business tax, compliance and financial planning information. Show two to four Nigerian professionals around a refined conference table with a laptop, calculator, financial documents and a subtle planning board. Documents contain no readable invented text. Landscape website-card composition, natural daylight, sophisticated blue-grey environment, realistic Nigerian office architecture, restrained corporate magazine aesthetic.
 
-### `/images/insight-revenue-recovery.jpg`
+### `/images/insight-revenue-recovery.jpg` (1.91:1 master (1200×630))
 **Placement:** Homepage Insight card for the revenue-recovery article.
 
 **Generation prompt:** Create a premium editorial photograph of Nigerian business executives conducting a revenue-performance diagnostic. Show a senior consultant and client leadership reviewing charts, invoices and operational information on a laptop in a sophisticated Lagos business environment. The mood is analytical, focused and constructive. No readable invented figures. Landscape composition, natural daylight, controlled depth of field, OA Group blue-grey visual language, authentic Nigerian professionals.
 
-### `/images/insight-diaspora-property.jpg`
+### `/images/insight-diaspora-property.jpg` (1.91:1 master (1200×630))
 **Placement:** Homepage Insight card for the diaspora-property article.
 
 **Generation prompt:** Create a premium Nigerian real-estate investment editorial photograph showing a professional property consultation. A Nigerian investment adviser and client review architectural plans and property information beside a laptop, with a refined contemporary Nigerian residential or commercial development visible through glass behind them. Communicate trust, due diligence and long-term investment rather than luxury excess. Landscape crop, warm natural daylight, realistic Nigerian architecture, sophisticated blue-grey accents, no visible developer logos or readable invented documents.
@@ -93,7 +93,7 @@ Subtly use OA Group's approved palette: `#5C6C94`, `#AAB4C8`, `#4A4A4A`, `#FFFFF
 
 # 4. ABOUT
 
-### `/images/about-institutional-architecture.jpg`
+### `/images/about-institutional-architecture.jpg` (1.91:1 master (1200×630))
 **Placement:** About page institutional architecture/group-model feature.
 
 **Generation prompt:** Create a premium architectural editorial photograph of a sophisticated Nigerian corporate headquarters or professional-services office interior in Lagos. Show strong architectural lines, a refined boardroom, glass, stone, timber and subtle professional activity in the background. Include two or three Nigerian professionals naturally collaborating at a distance. Communicate institutional maturity, governance, structure and permanence. Landscape 16:9 composition, soft afternoon Lagos daylight, restrained blue-grey palette, photorealistic architecture photography.
@@ -102,7 +102,7 @@ Subtly use OA Group's approved palette: `#5C6C94`, `#AAB4C8`, `#4A4A4A`, `#FFFFF
 
 # 5. OUR COMPANIES
 
-### `/images/our-companies-portfolio.jpg`
+### `/images/our-companies-portfolio.jpg` (1.91:1 master (1200×630))
 **Placement:** Our Companies portfolio feature.
 
 **Generation prompt:** Create a sophisticated editorial wide image representing an integrated Nigerian business portfolio without creating a literal collage. Show a coherent contemporary business environment in which visual cues subtly represent professional services, consulting, property, financial services and contracting: executive planning materials, architectural drawings, financial analysis, property context and project documentation integrated naturally within one environment. Use Nigerian professionals where people appear. The image should feel like one institution coordinating multiple capabilities. Premium cinematic lighting, landscape composition, restrained OA Group blue-grey palette, no logos, no readable invented text.
@@ -111,7 +111,7 @@ Subtly use OA Group's approved palette: `#5C6C94`, `#AAB4C8`, `#4A4A4A`, `#FFFFF
 
 # 6. SOLUTIONS
 
-### `/images/solutions-integrated.jpg`
+### `/images/solutions-integrated.jpg` (1.91:1 master (1200×630))
 **Placement:** Solutions page integrated-solutions feature.
 
 **Generation prompt:** Create a premium cinematic photograph of a senior Nigerian client strategy meeting where professionals from finance, advisory, property and project delivery work together on a complex business problem. Show a table with architectural plans, financial analysis and operational documents arranged naturally. Communicate integrated problem-solving, disciplined execution and strategic clarity. Landscape composition, authentic contemporary Lagos office, natural window light, realistic people, restrained blue-grey palette, no readable invented documents or logos.
@@ -120,7 +120,7 @@ Subtly use OA Group's approved palette: `#5C6C94`, `#AAB4C8`, `#4A4A4A`, `#FFFFF
 
 # 7. INDUSTRIES
 
-### `/images/industries-nigeria.jpg`
+### `/images/industries-nigeria.jpg` (16:9 master)
 **Placement:** Industries page Nigerian-market feature.
 
 **Generation prompt:** Create a cinematic editorial panorama representing the Nigerian business environment as one connected economic landscape. Combine credible Lagos commercial architecture, institutional buildings, property development, infrastructure activity and modern professional workplaces through natural visual continuity rather than a collage. Use subtle human activity with authentic Nigerian professionals where appropriate. Warm natural Nigerian daylight, atmospheric depth, sophisticated editorial realism, restrained OA Group blue-grey palette, landscape 16:9 composition.
@@ -129,7 +129,7 @@ Subtly use OA Group's approved palette: `#5C6C94`, `#AAB4C8`, `#4A4A4A`, `#FFFFF
 
 # 8. CAREERS
 
-### `/images/careers-culture.jpg`
+### `/images/careers-culture.jpg` (1.91:1 master (1200×630))
 **Placement:** Careers page culture/team feature.
 
 **Generation prompt:** Create a premium recruitment-editorial photograph of ambitious Nigerian professionals collaborating naturally in a refined contemporary Lagos corporate environment. Show a small multidisciplinary team discussing work around a table and moving through an open professional workspace. The people should appear competent, thoughtful and engaged rather than posing for a stock photograph. Natural expressions, realistic Nigerian office environment, soft morning window light, sophisticated composition, authentic diversity, restrained blue-grey palette.
@@ -139,91 +139,91 @@ Subtly use OA Group's approved palette: `#5C6C94`, `#AAB4C8`, `#4A4A4A`, `#FFFFF
 # 9. GALLERY — 12 PHOTOGRAPHY SLOTS + 3 VIDEO THUMBNAILS
 
 ## Office & Team — Slot 01
-### `/images/gallery-office-team-01.jpg`
+### `/images/gallery-office-team-01.jpg` (1.91:1 master (1200×630))
 **Placement:** Gallery → Office & Team.
 
 **Generation prompt:** Create a documentary-style premium photograph of a Nigerian professional team beginning a strategy session in a modern Lagos office. Capture a candid moment before or during discussion, with laptops, notebooks and professional materials naturally arranged. No one should pose directly for the camera. Soft daylight, realistic office architecture, landscape editorial composition.
 
 ## Office & Team — Slot 02
-### `/images/gallery-office-team-02.jpg`
+### `/images/gallery-office-team-02.jpg` (1.91:1 master (1200×630))
 **Placement:** Gallery → Office & Team.
 
 **Generation prompt:** Create a premium candid editorial photograph of Nigerian professionals collaborating across disciplines in a contemporary office. One person presents an idea while colleagues review information on a screen and documents. The scene should feel productive and authentic, not staged. Natural window light, sophisticated architecture, landscape crop, restrained OA Group palette.
 
 ## Projects — Slot 01
-### `/images/gallery-project-01.jpg`
+### `/images/gallery-project-01.jpg` (1.91:1 master (1200×630))
 **Placement:** Gallery → Projects.
 
 **Generation prompt:** Create a technically credible editorial photograph of Nigerian project professionals reviewing architectural drawings and a delivery schedule at an orderly active construction or infrastructure environment. Include appropriate professional PPE only where the environment requires it. Late-afternoon cinematic light, realistic construction materials, landscape composition.
 
 ## Projects — Slot 02
-### `/images/gallery-project-02.jpg`
+### `/images/gallery-project-02.jpg` (1.91:1 master (1200×630))
 **Placement:** Gallery → Projects.
 
 **Generation prompt:** Create a premium documentary photograph of Nigerian engineering/project professionals conducting an on-site inspection of a modern infrastructure or commercial development project. Show careful observation, measurement and coordination rather than staged posing. Authentic site conditions, credible PPE, controlled cinematic daylight, landscape editorial composition.
 
 ## Projects — Slot 03
-### `/images/gallery-project-03.jpg`
+### `/images/gallery-project-03.jpg` (1.91:1 master (1200×630))
 **Placement:** Gallery → Projects.
 
 **Generation prompt:** Create a cinematic editorial photograph of a Nigerian project-delivery team in a project office reviewing plans, procurement information and a construction schedule. Include architectural drawings, material samples and a laptop without readable invented text. Sophisticated but realistic professional environment, landscape crop, natural light.
 
 ## Projects — Slot 04
-### `/images/gallery-project-04.jpg`
+### `/images/gallery-project-04.jpg` (1.91:1 master (1200×630))
 **Placement:** Gallery → Projects.
 
 **Generation prompt:** Create a premium wide editorial photograph showing a completed or near-completed Nigerian commercial/infrastructure project with professionals performing a final quality or delivery review in the foreground. The architecture should be realistic and investment-grade, with subtle human activity and restrained cinematic lighting.
 
 ## Properties — Slot 01
-### `/images/gallery-property-01.jpg`
+### `/images/gallery-property-01.jpg` (1.91:1 master (1200×630))
 **Placement:** Gallery → Properties.
 
 **Generation prompt:** Create an ultra-realistic architectural editorial photograph of a premium but credible Nigerian residential property in Lagos. Show refined architecture, realistic landscaping, natural materials and warm daylight. Avoid exaggerated mansion imagery. Investment-grade presentation, clean lines, sophisticated composition.
 
 ## Properties — Slot 02
-### `/images/gallery-property-02.jpg`
+### `/images/gallery-property-02.jpg` (1.91:1 master (1200×630))
 **Placement:** Gallery → Properties.
 
 **Generation prompt:** Create a premium editorial photograph of a contemporary Nigerian commercial property development. Show realistic office or mixed-use architecture, landscaped public space and subtle human activity. Golden-hour natural light, credible urban context, refined materials, investment-grade architectural photography.
 
 ## Properties — Slot 03
-### `/images/gallery-property-03.jpg`
+### `/images/gallery-property-03.jpg` (16:9 master)
 **Placement:** Gallery → Properties.
 
 **Generation prompt:** Create a sophisticated Nigerian property-investment scene showing an adviser and client examining a completed commercial/residential development from an appropriate viewing area. Communicate due diligence and long-term value rather than luxury consumption. Photorealistic, warm natural light, landscape editorial composition.
 
 ## Events & Training — Slot 01
-### `/images/gallery-events-training-01.jpg`
+### `/images/gallery-events-training-01.jpg` (1.91:1 master (1200×630))
 **Placement:** Gallery → Events & Training.
 
 **Generation prompt:** Create a premium editorial photograph of a serious professional training session in Nigeria. A Nigerian facilitator presents a structured business topic while participants actively engage with the material. Capture a natural moment of discussion rather than a posed audience. Contemporary conference room, soft directional lighting, landscape composition.
 
 ## Events & Training — Slot 02
-### `/images/gallery-events-training-02.jpg`
+### `/images/gallery-events-training-02.jpg` (1.91:1 master (1200×630))
 **Placement:** Gallery → Events & Training.
 
 **Generation prompt:** Create a documentary-style photograph of Nigerian professionals participating in a small-group executive workshop. Show collaborative discussion around printed materials and laptops, with natural expressions and focused engagement. Premium corporate magazine aesthetic, realistic Nigerian environment, restrained colour palette.
 
 ## Events & Training — Slot 03
-### `/images/gallery-events-training-03.jpg`
+### `/images/gallery-events-training-03.jpg` (1.91:1 master (1200×630))
 **Placement:** Gallery → Events & Training.
 
 **Generation prompt:** Create a cinematic editorial photograph of a professional business event in Lagos with Nigerian executives and professionals networking and discussing ideas naturally. Avoid staged handshakes and camera-facing poses. Elegant venue, subtle architectural detail, sophisticated lighting, authentic atmosphere.
 
 ## Gallery Video Thumbnail — Slot 01
-### `/images/gallery-video-01.jpg`
+### `/images/gallery-video-01.jpg` (1.91:1 master (1200×630))
 **Placement:** Gallery → Video.
 
 **Generation prompt:** Create a cinematic still frame representing an OA Group corporate film: Lagos architecture at early morning with subtle professional activity and atmospheric depth. Premium commercial-film aesthetic, OA Group blue-grey palette, landscape 16:9, no text or logos.
 
 ## Gallery Video Thumbnail — Slot 02
-### `/images/gallery-video-02.jpg`
+### `/images/gallery-video-02.jpg` (1.91:1 master (1200×630))
 **Placement:** Gallery → Video.
 
 **Generation prompt:** Create a cinematic still frame representing coordinated professional execution: Nigerian professionals reviewing strategy and project information in a sophisticated office, captured with shallow depth of field and controlled natural light. Premium corporate film aesthetic, landscape 16:9, no text or logos.
 
 ## Gallery Video Thumbnail — Slot 03
-### `/images/gallery-video-03.jpg`
+### `/images/gallery-video-03.jpg` (1.91:1 master (1200×630))
 **Placement:** Gallery → Video.
 
 **Generation prompt:** Create a cinematic still frame representing sustainable business growth in Nigeria: a refined commercial/property/infrastructure environment with Nigerian professionals moving through the scene. Authentic contemporary Lagos context, premium editorial cinematography, atmospheric depth, landscape 16:9.
@@ -232,12 +232,12 @@ Subtly use OA Group's approved palette: `#5C6C94`, `#AAB4C8`, `#4A4A4A`, `#FFFFF
 
 # 10. CONTACT
 
-### `/images/contact-office.jpg`
+### `/images/contact-office.jpg` (1.91:1 master (1200×630))
 **Placement:** Contact page professional group/office feature.
 
 **Generation prompt:** Create a premium editorial photograph of a sophisticated Nigerian professional-services office reception or meeting environment in Lagos. Show subtle human activity, refined architecture, natural materials and a welcoming but institutional atmosphere. Avoid a hotel-lobby appearance. Landscape composition, soft daylight, restrained OA Group blue-grey palette.
 
-### `/images/contact-lagos.jpg`
+### `/images/contact-lagos.jpg` (1.91:1 master (1200×630))
 **Placement:** Contact page Lagos location visual.
 
 **Generation prompt:** Create a refined cinematic aerial/editorial view of Lagos, Nigeria during blue hour, emphasizing credible commercial districts, modern office architecture, roads and urban density. The image should feel geographically believable without relying on fabricated landmarks. Atmospheric depth, restrained blue-grey grading, premium corporate campaign photography, 16:9 landscape.
@@ -246,7 +246,7 @@ Subtly use OA Group's approved palette: `#5C6C94`, `#AAB4C8`, `#4A4A4A`, `#FFFFF
 
 # 11. FAQ
 
-### `/images/faq-institutional.jpg`
+### `/images/faq-institutional.jpg` (1.91:1 master (1200×630))
 **Placement:** FAQ institutional/supporting feature.
 
 **Generation prompt:** Create a calm premium editorial photograph of a Nigerian professional-services office environment with subtle evidence of governance, documentation and client support. Show an organised workspace, a professional reviewing information and refined architecture in the background. Communicate clarity, reliability and institutional order. Landscape composition, soft natural light, restrained OA Group palette.
@@ -258,49 +258,49 @@ Subtly use OA Group's approved palette: `#5C6C94`, `#AAB4C8`, `#4A4A4A`, `#FFFFF
 Each article has one large editorial header image in the `.page-hero` right-hand `.arch-frame`.
 
 ## Tax Reform for SMEs
-### `/images/article-tax-reform.jpg`
+### `/images/article-tax-reform.jpg` (1.91:1 master (1200×630))
 **Placement:** Insight article header.
 
 **Generation prompt:** Create a premium editorial business-publication photograph of Nigerian SME leadership reviewing tax and compliance planning in a Lagos office. Show a business owner, finance professional and adviser reviewing financial documents, a laptop and calculator. No readable invented text or figures. Mood: informed, practical and analytical. Landscape 3:2 or 16:9 crop with the visual subject weighted toward the right to support article text on the left. Sophisticated blue-grey palette, natural daylight.
 
 ## Recover Lost Revenue
-### `/images/article-revenue-recovery.jpg`
+### `/images/article-revenue-recovery.jpg` (1.91:1 master (1200×630))
 **Placement:** Insight article header.
 
 **Generation prompt:** Create a premium editorial photograph of a Nigerian management team conducting a revenue diagnostic. Show executives and an adviser examining sales performance, customer information and operational documents on a laptop and printed materials. No readable invented figures. Analytical and solution-oriented mood, authentic Lagos professional environment, cinematic side light, restrained blue-grey palette, landscape composition with right-weighted visual interest.
 
 ## Diaspora Real Estate Investment
-### `/images/article-diaspora-property.jpg`
+### `/images/article-diaspora-property.jpg` (1.91:1 master (1200×630))
 **Placement:** Insight article header.
 
 **Generation prompt:** Create a premium editorial photograph representing Nigerian diaspora property investment. Show a Nigerian investor meeting with a professional property adviser to review architectural plans and a real-estate development in Lagos. Communicate remote decision-making, due diligence, trust and long-term investment. Avoid stereotypes and exaggerated luxury. Landscape composition, right-weighted subjects, realistic Nigerian property architecture, warm natural daylight.
 
 ## Agency Banking as a Business Model
-### `/images/article-agency-banking.jpg`
+### `/images/article-agency-banking.jpg` (1.91:1 master (1200×630))
 **Placement:** Insight article header.
 
 **Generation prompt:** Create a premium editorial photograph of a credible Nigerian financial-services/agency-banking environment. Show a professional financial-service operator assisting a customer in a clean modern setting, with subtle technology and transaction cues but no visible bank logos, payment-card brands or readable invented screens. Authentic Nigerian context, practical and trustworthy mood, photorealistic documentary-commercial style, landscape composition.
 
 ## Federal Government Contracts
-### `/images/article-government-contracts.jpg`
+### `/images/article-government-contracts.jpg` (1.91:1 master (1200×630))
 **Placement:** Insight article header.
 
 **Generation prompt:** Create a premium editorial photograph of Nigerian professionals preparing a serious procurement/project-delivery submission. Show a multidisciplinary team reviewing architectural drawings, compliance documentation, schedules and a laptop in a professional office. Documents must contain no readable invented government names, tender numbers or credentials. Communicate preparedness, compliance, disciplined delivery and professionalism. Landscape, right-weighted composition, natural light.
 
 ## OA Group Integrated Approach
-### `/images/article-integrated-approach.jpg`
+### `/images/article-integrated-approach.jpg` (1.91:1 master (1200×630))
 **Placement:** Insight article header.
 
 **Generation prompt:** Create a premium institutional editorial photograph showing several Nigerian professionals from different business disciplines collaborating around one strategic plan. Include subtle cues of finance, consulting, property and project delivery without turning the image into a collage. Communicate one integrated group with connected expertise and coordinated execution. Sophisticated Lagos corporate environment, cinematic light, landscape composition, restrained OA Group palette.
 
 ## Internal Controls vs External Audit
-### `/images/article-internal-controls-audit.jpg`
+### `/images/article-internal-controls-audit.jpg` (1.91:1 master (1200×630))
 **Placement:** Insight article header.
 
 **Generation prompt:** Create a premium editorial photograph of a Nigerian finance and governance team conducting a structured internal-controls and audit review. Show professional documentation, process maps and financial materials on a conference table, with professionals examining them carefully. No readable invented figures, audit opinions, company names or credentials. Serious but constructive mood, sophisticated office, controlled daylight, landscape composition.
 
 ## Property Yield vs Capital Appreciation
-### `/images/article-property-yield.jpg`
+### `/images/article-property-yield.jpg` (1.91:1 master (1200×630))
 **Placement:** Insight article header.
 
 **Generation prompt:** Create a premium Nigerian real-estate investment editorial photograph showing an adviser and investor evaluating two property investment scenarios. Include architectural plans, a laptop with non-readable interface elements and a view of a credible Nigerian commercial/residential development. Communicate analytical investment decision-making rather than luxury consumption. Landscape composition, warm natural light, sophisticated materials, realistic Nigerian architecture.
@@ -374,3 +374,17 @@ Whenever a new image is required, add:
 4. Full generation prompt
 5. Negative prompt where useful
 6. Technical/crop guidance
+
+## REQUIRED IMAGE DIMENSION STANDARD
+
+Every image prompt in this document now includes an explicit master dimension.
+
+**Generation rule:** The image-generation model must generate the stated aspect ratio/composition and the exported JPG must preserve that ratio.
+
+- **16:9 master** — horizontal editorial, hero, article, gallery and most page imagery.
+- **4:5 master** — vertical portraits/headshots and portrait-led compositions.
+- **1.91:1 master (1200×630)** — Open Graph/social-sharing artwork.
+
+**Important:** Do not substitute another aspect ratio because the image model's default is different. The dimension stated beside each filename is part of the production specification.
+
+**Export:** JPG, quality 80–90, sRGB, using the exact filename shown in each prompt.
