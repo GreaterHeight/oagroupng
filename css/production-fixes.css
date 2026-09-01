@@ -216,3 +216,31 @@ body.nav-open{overflow:hidden}@media(min-width:821px){body.nav-open{overflow:aut
 @media (max-width: 560px) {
   .arch-frame-placeholder { min-height: 240px; padding: 24px; }
 }
+
+/* v3.8 — Image Placeholder / Auto-Swap System
+   Governing rule: placeholder hidden by default; visible only after
+   genuine image-load failure adds .is-empty to the image container. */
+.event-card-placeholder,
+.course-card-placeholder,
+.course-purchase-placeholder,
+.cart-line-placeholder,
+.image-placeholder {
+  display: none;
+}
+
+.event-card-image.is-empty .event-card-placeholder,
+.course-card-image.is-empty .course-card-placeholder,
+.course-purchase-image.is-empty .course-purchase-placeholder,
+.cart-line-image.is-empty .cart-line-placeholder,
+.image-frame.is-empty .image-placeholder {
+  display: grid;
+}
+
+/* Intentional empty-state backgrounds: preserve the designed state
+   instead of leaving an unstyled blank area. */
+.event-card-image,
+.course-card-image,
+.course-purchase-image,
+.cart-line-image {
+  background: var(--event-placeholder-bg, #D9E4F5);
+}
