@@ -22,3 +22,29 @@
 @media (max-width: 900px) {
   .nav-search-icon { width:44px; height:44px; }
 }
+
+
+/* v3.3 — keep primary navigation labels and CTA on one line */
+.nav-links > a,
+.nav-links .nav-cta,
+.nav-links .nav-search-icon {
+  white-space: nowrap;
+}
+
+.nav-links .nav-cta {
+  flex-shrink: 0;
+}
+
+.nav-links > a:not(.nav-cta):not(.nav-search-icon) {
+  flex-shrink: 0;
+}
+
+@media (min-width: 901px) {
+  .nav-links {
+    flex-wrap: nowrap;
+  }
+
+  .nav-links > a {
+    white-space: nowrap;
+  }
+}

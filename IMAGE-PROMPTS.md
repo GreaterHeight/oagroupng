@@ -1,54 +1,43 @@
-# NANO BANANA PRO IMAGE PROMPTS
+# OA Group Nigeria — Image Prompts
 
-## Homepage — Hero
-**Prompt:** Ultra-realistic 8K editorial campaign photograph representing a sophisticated Nigerian diversified business group, premium institutional office architecture in Lagos, senior professionals in an understated boardroom environment, deep OA Group blue-grey and dark navy visual atmosphere, strong negative space for headline placement, cinematic directional morning light through tall windows, refined magazine photography, authentic expressions, no generic stock-photo posing.
-- MIXED: Black and White professionals together naturally in a multinational meeting.
-- ALL BLACK: Everyone Black, Nigerian-led executive environment.
-- ALL WHITE: Everyone White, international professional-services environment.
+## OA GROUP HOMEPAGE HERO MOTION ASSET
 
-## About — Institutional Architecture
-**Prompt:** Ultra-realistic 8K editorial photograph of an elegant Nigerian corporate headquarters interior, architectural lines, boardroom, documents and subtle human activity, restrained blue-grey palette, premium institutional mood, soft afternoon Lagos light, magazine architecture photography.
-- MIXED: Black and White professionals naturally collaborating.
-- ALL BLACK: Nigerian Black leadership team.
-- ALL WHITE: White international leadership team.
+### `videos/oagroup-hero.mp4` — Master Homepage Hero Video
+**Purpose:** Full-bleed cinematic motion background for the OA Group homepage hero. The motion should communicate an established Nigerian professional-services group operating across multiple business disciplines. It must support, not compete with, the hero headline and CTA.
 
-## Our Companies — Portfolio
-**Prompt:** Ultra-realistic 8K editorial composite showing five distinct professional environments representing audit, consulting, property, financial services and contracting, visually connected by restrained OA Group blue-grey design language, cinematic controlled lighting, no collage gimmicks.
-- MIXED / ALL BLACK / ALL WHITE: Maintain the same composition while changing the people naturally.
+**Generation prompt:**
+Create a premium, cinematic corporate motion film for **OA Group Nigeria**, a diversified Nigerian professional services and business group. The visual language must feel institutional, intelligent, established, discreet, contemporary and premium — never flashy, futuristic, generic-tech, or stock-corporate.
 
-## Solutions — Cross-group Engagement
-**Prompt:** Ultra-realistic 8K campaign photograph of a senior client strategy meeting where finance, advisory, property and project professionals review a complex business plan, subtle blue-grey corporate styling, directional window light, authentic Nigerian business environment, premium international consulting aesthetic.
-- MIXED / ALL BLACK / ALL WHITE.
+Open with a restrained dawn-to-morning aerial/architectural impression of Lagos, Nigeria, presented with elegant cinematic movement and natural atmospheric depth. Transition through a sequence of sophisticated, realistic business environments: an executive strategy meeting, financial analysis and advisory work, a Nigerian professional reviewing structured documents, modern commercial property, infrastructure/project activity, technology-enabled operations, and a diverse professional team collaborating. Interweave subtle abstract visual motifs representing connected systems, disciplined execution, capital, governance, advisory, property and institutional growth.
 
-## Industries — Nigerian Market
-**Prompt:** Ultra-realistic 8K cinematic editorial panorama showing Lagos commercial districts, institutional buildings, property development, infrastructure activity and professional workplaces as one coherent visual story, restrained OA Group palette, warm natural Nigerian daylight, sophisticated magazine realism.
-- MIXED / ALL BLACK / ALL WHITE where people appear.
+Use restrained camera movement: slow dolly, controlled lateral movement, gentle aerial drift, subtle rack focus and measured transitions. Maintain generous negative space in the central/left text-safe area throughout the sequence so white hero typography remains highly legible. Subjects must remain secondary to the message.
 
-## Insights — Editorial
-**Prompt:** Ultra-realistic 8K editorial still life for a premium Nigerian business publication: bound reports, financial papers, architectural drawings, laptop and pen on a refined desk, restrained blue-grey and white palette, side-lit by soft morning window light, tactile textures, no visible invented brand logos.
+Visual treatment: photorealistic, high-end commercial cinematography, natural skin tones, authentic contemporary Nigeria, sophisticated architecture, realistic materials, premium editorial composition, shallow depth of field where appropriate, subtle filmic texture, refined contrast, clean highlights, no excessive lens flares, no neon, no cyberpunk, no exaggerated financial graphics.
 
-## Gallery — Office & Team
-**Prompt:** Ultra-realistic 8K documentary-style photograph of a professional team working naturally in a modern Lagos office, candid collaboration, no posed stock-photo smiles, soft daylight, premium institutional aesthetic.
-- MIXED / ALL BLACK / ALL WHITE.
+OA Group brand palette should influence the environment and grading subtly through deep blue #5C6C94, slate #4A4A4A, light blue-grey #AAB4C8, and white #FFFFFF. Do not introduce competing brand colours. Avoid visible third-party logos, watermarks, fake company names, fabricated statistics, readable documents, or invented credentials.
 
-## Gallery — Projects
-**Prompt:** Ultra-realistic 8K editorial photograph of project professionals reviewing drawings and a delivery schedule at an active but orderly Nigerian project environment, cinematic late-afternoon light, technically credible PPE where appropriate, sophisticated contracting photography.
-- MIXED / ALL BLACK / ALL WHITE.
+The film must have a coherent narrative of **connected expertise becoming coordinated execution**. It should feel like one integrated group rather than a collection of unrelated businesses.
 
-## Gallery — Properties
-**Prompt:** Ultra-realistic 8K architectural editorial photograph of a premium Nigerian residential or commercial property, refined landscaping, realistic materials, warm golden-hour light, investment-grade presentation, no exaggerated luxury clichés.
+Format: 16:9, 4K or higher master, 24fps, approximately 18–24 seconds, seamless-feeling loop, no dialogue, no music required in the generated master, no on-screen text, no subtitles, no logos except where an abstract non-readable OA-inspired visual treatment is unavoidable.
 
-## Gallery — Events & Training
-**Prompt:** Ultra-realistic 8K editorial photograph of a serious professional training session in Nigeria, presenter and participants engaged with a structured business discussion, natural expressions, soft directional conference-room lighting, premium corporate magazine aesthetic.
-- MIXED / ALL BLACK / ALL WHITE.
+Create natural visual continuity between the opening and closing frames so the website can loop the video without an obvious jump. Keep motion calm enough for text overlay and web playback.
 
-## Careers — Culture
-**Prompt:** Ultra-realistic 8K editorial portrait of a diverse group of ambitious professionals in a refined Nigerian corporate environment, natural interaction, quiet confidence, soft morning window light, premium recruitment campaign photography.
-- MIXED / ALL BLACK / ALL WHITE.
+**Negative prompt:** generic corporate stock footage, handshake clichés, smiling-at-camera businesspeople, Silicon Valley imagery, cyberpunk, holograms, neon, excessive blue glow, fake dashboards, unreadable floating text, giant logos, watermarks, distorted hands, duplicated people, artificial faces, plastic skin, over-saturated grading, rapid cuts, shaky camera, excessive camera movement, busy central composition, political imagery, religious imagery, luxury-car flexing, staged wealth, unrealistic Lagos skyline, fabricated landmarks.
 
-## Contact — Lagos
-**Prompt:** Ultra-realistic 8K cinematic aerial/editorial view of Lagos business district at refined blue hour, credible urban density, modern office architecture, subtle atmospheric depth, restrained blue-grey tonal treatment, premium corporate campaign image.
+### `images/hero-video-poster.jpg` — Hero Video Poster / Fallback
+**Purpose:** Static fallback image for browsers/devices that cannot autoplay the hero video and for reduced-motion users.
 
+**Generation prompt:**
+Create a premium 16:9 editorial hero image for **OA Group Nigeria**, designed as the static fallback/poster for a cinematic website hero video. Show an authentic, sophisticated contemporary Nigerian business environment with subtle Lagos architectural context in the background, combined with a refined foreground scene suggesting executive strategy, professional services, governance and coordinated business execution.
 
-## IMAGE PLACEMENT MAP
-See `IMAGE-PLACEMENT-MAP.md` for the page-by-page replacement map and commissioning guidance.
+Composition must preserve a large, calm text-safe area on the left/centre-left for a white headline and supporting copy. Keep the principal human subjects and architectural interest toward the right side or lower-right quadrant. The image must communicate institutional confidence, intelligence, trust, continuity and integrated capability.
+
+Photorealistic high-end corporate editorial photography, authentic Nigerian professionals, natural expressions and skin tones, premium architectural detail, controlled depth of field, elegant daylight, restrained cinematic contrast, realistic materials, subtle atmosphere.
+
+Use only the OA Group visual language: deep blue #5C6C94, slate #4A4A4A, light blue-grey #AAB4C8 and white #FFFFFF. Do not add competing brand colours. No visible third-party logos, no watermarks, no readable documents, no fake statistics, no text embedded in the image.
+
+The poster must visually belong to the same film as `videos/oagroup-hero.mp4`, with a composition that remains strong even when the video is unavailable.
+
+**Technical target:** 16:9, minimum 3840×2160, JPG, optimized for web delivery while retaining sufficient detail for large desktop hero displays.
+
+**Negative prompt:** generic stock-photo aesthetic, handshake, forced smiles, exaggerated luxury, cyberpunk, neon, holograms, futuristic city, fake Lagos skyline, over-saturated colours, excessive blue glow, text overlays, watermarks, third-party logos, distorted anatomy, artificial skin, cluttered composition, central visual noise.
