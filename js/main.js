@@ -1,3 +1,57 @@
+/* v4.2 — CSP-safe placeholder-first image fallback */
+(() => {
+  "use strict";
+
+  const isSiteImage = (img) => {
+    if (!(img instanceof HTMLImageElement)) return false;
+    const src = img.getAttribute("src") || "";
+    return src.startsWith("/images/");
+  };
+
+  const markImageUnavailable = (img) => {
+    if (!isSiteImage(img) || img.dataset.imageFallbackApplied === "true") return;
+    img.dataset.imageFallbackApplied = "true";
+
+    const frame = img.closest(".arch-frame");
+    const media = img.closest(".modal__media");
+
+    if (frame) {
+      frame.classList.add("is-empty");
+      img.remove();
+      return;
+    }
+
+    if (media) {
+      media.classList.add("is-empty");
+      img.remove();
+      return;
+    }
+
+    // Supplied brand assets and any future non-framed image should fail
+    // silently rather than leaving a browser broken-image icon.
+    img.remove();
+  };
+
+  // Capture the native error event so this also handles lazy-loaded images.
+  document.addEventListener("error", (event) => {
+    if (event.target instanceof HTMLImageElement) markImageUnavailable(event.target);
+  }, true);
+
+  // Deferred scripts can execute after an eager image has already failed.
+  // Scan completed images once DOM parsing is complete to catch that case.
+  const scanCompletedImages = () => {
+    document.querySelectorAll('img[src^="/images/"]').forEach((img) => {
+      if (img.complete && img.naturalWidth === 0) markImageUnavailable(img);
+    });
+  };
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", scanCompletedImages, { once: true });
+  } else {
+    scanCompletedImages();
+  }
+})();
+
 document.addEventListener("DOMContentLoaded",()=>{
   const header=document.querySelector(".site-header");
   const back=document.querySelector(".backtop");

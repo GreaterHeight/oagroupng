@@ -322,3 +322,11 @@ body.nav-open{overflow:hidden}@media(min-width:821px){body.nav-open{overflow:aut
 .hero__poster-placeholder-icon svg { width:84px; height:84px; }
 .hero.hero--poster-missing .hero__poster-placeholder { display:grid; }
 .hero.hero--poster-missing .hero__video { background:var(--oa-primary-900); }
+
+
+/* v4.2 — CSP-safe image fallback sizing */
+.insight-card .arch-frame { aspect-ratio: 16 / 9; min-height: 0; }
+.page-hero .arch-frame { min-height: 320px; }
+.gallery-item .arch-frame { min-height: 260px; }
+.arch-frame-placeholder { z-index: 1; }
+.arch-frame-placeholder__icon { display: grid; place-items: center; }
