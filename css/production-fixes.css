@@ -473,3 +473,130 @@ body.nav-open{overflow:hidden}@media(min-width:821px){body.nav-open{overflow:aut
   .site-loader__mark::before{animation:none}
   .site-loader{transition:none}
 }
+
+
+/* v4.6 — true full-bleed inner-page heroes
+   The hero image must belong to the page hero itself, not the centered
+   content container. The image element is retained so the existing
+   placeholder-first / load-failure mechanism remains intact. */
+.page-hero{
+  min-height:380px;
+  position:relative;
+  overflow:hidden;
+}
+.page-hero__grid{
+  position:static !important;
+  min-height:380px;
+  display:flex;
+  align-items:center;
+}
+.page-hero__grid > div:first-child{
+  position:relative;
+  z-index:3;
+  width:min(68%,760px);
+  padding:48px 0;
+}
+.page-hero .arch-frame{
+  position:absolute !important;
+  inset:0 !important;
+  z-index:0;
+  width:100% !important;
+  height:100% !important;
+  min-height:0 !important;
+  max-width:none !important;
+  aspect-ratio:auto !important;
+  border:0;
+}
+.page-hero .arch-frame > img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  max-width:none;
+  object-fit:cover;
+  object-position:center center;
+}
+.page-hero .arch-frame::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:2;
+  pointer-events:none;
+  background:linear-gradient(
+    90deg,
+    rgba(7,17,38,.94) 0%,
+    rgba(7,17,38,.78) 36%,
+    rgba(7,17,38,.43) 66%,
+    rgba(7,17,38,.18) 100%
+  );
+}
+.page-hero h1{
+  font-size:clamp(46px,5.2vw,72px);
+  line-height:1.02;
+  max-width:760px;
+}
+.page-hero .lede{
+  max-width:680px;
+  font-size:clamp(17px,1.45vw,21px);
+  line-height:1.45;
+}
+.page-hero .card-meta{
+  position:relative;
+  z-index:3;
+}
+
+/* Missing-image state: retain the same full-bleed footprint. */
+.page-hero .arch-frame.is-empty .arch-frame-placeholder{
+  display:grid;
+  position:absolute;
+  inset:0;
+  min-height:0;
+}
+.page-hero .arch-frame.is-empty::after{
+  background:rgba(7,17,38,.94);
+}
+
+/* Mobile: preserve the Home-page navigation scale while keeping the
+   inner hero compact and genuinely edge-to-edge. */
+@media (max-width:900px){
+  .page-hero{min-height:330px}
+  .page-hero__grid{
+    min-height:330px;
+    display:flex;
+    align-items:center;
+  }
+  .page-hero__grid > div:first-child{
+    width:100%;
+    padding:42px 0;
+  }
+  .page-hero h1{
+    font-size:clamp(42px,8.5vw,58px);
+    line-height:1.02;
+  }
+  .page-hero .lede{
+    font-size:18px;
+    line-height:1.45;
+    max-width:620px;
+  }
+  .page-hero .arch-frame::after{
+    background:linear-gradient(
+      90deg,
+      rgba(7,17,38,.91) 0%,
+      rgba(7,17,38,.72) 55%,
+      rgba(7,17,38,.48) 100%
+    );
+  }
+}
+
+@media (max-width:560px){
+  .page-hero{min-height:300px}
+  .page-hero__grid{min-height:300px}
+  .page-hero__grid > div:first-child{padding:34px 0}
+  .page-hero h1{
+    font-size:clamp(38px,10vw,50px);
+  }
+  .page-hero .lede{
+    font-size:16px;
+    line-height:1.4;
+  }
+}
