@@ -1,1 +1,74 @@
-document.addEventListener("DOMContentLoaded",()=>{const buttons=[...document.querySelectorAll("[data-video]")],modal=document.querySelector("[data-video-modal]"),close=modal?.querySelector("[data-video-close]"),title=modal?.querySelector("[data-video-title]"),body=modal?.querySelector("[data-video-body]");if(!buttons.length||!modal||!close||!title||!body)return;const videos=[{title:"OA Group overview",text:"Video placeholder: replace with the approved OA Group overview production or YouTube embed before launch."},{title:"Inside the specialist companies",text:"Video placeholder: replace with the approved company portfolio production or YouTube embed before launch."},{title:"Projects and commercial capability",text:"Video placeholder: replace with the approved projects production or YouTube embed before launch."}];let last=null;const shut=()=>{modal.classList.remove("is-open");modal.setAttribute("aria-hidden","true");document.body.style.overflow="";last?.focus()};buttons.forEach(button=>button.addEventListener("click",()=>{const v=videos[Number(button.dataset.video)]||videos[0];last=button;title.textContent=v.title;body.textContent=v.text;modal.classList.add("is-open");modal.setAttribute("aria-hidden","false");document.body.style.overflow="hidden";close.focus()}));close.addEventListener("click",shut);modal.addEventListener("click",e=>{if(e.target===modal)shut()});document.addEventListener("keydown",e=>{if(!modal.classList.contains("is-open"))return;if(e.key==="Escape"){e.preventDefault();shut()}else if(e.key==="Tab"){const f=[close].filter(Boolean);if(document.activeElement===f[0]&&!e.shiftKey){e.preventDefault();f[0].focus()}}})});
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = [...document.querySelectorAll("[data-video]")];
+  const modal = document.querySelector("[data-video-modal]");
+  const dialog = modal?.querySelector(".modal__dialog");
+  const close = modal?.querySelector("[data-video-close]");
+  const title = modal?.querySelector("[data-video-title]");
+  const body = modal?.querySelector("[data-video-body]");
+
+  if (!buttons.length || !modal || !dialog || !close || !title || !body) return;
+
+  const videos = [
+    {
+      title: "OA Group overview",
+      text: "An institutional overview of OA Group Nigeria, its specialist companies and integrated solutions."
+    },
+    {
+      title: "Inside the specialist companies",
+      text: "A portfolio view of the specialist capabilities that make up OA Group Nigeria."
+    },
+    {
+      title: "Projects and commercial capability",
+      text: "An editorial view of project facilitation, contracting and commercial capability across the group."
+    }
+  ];
+
+  let lastTrigger = null;
+
+  const focusableElements = () => [close].filter(element => element && !element.disabled);
+
+  const closeModal = () => {
+    modal.classList.remove("is-open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+    lastTrigger?.focus();
+  };
+
+  const openModal = index => {
+    const media = videos[index] || videos[0];
+    lastTrigger = buttons[index] || buttons[0];
+    title.textContent = media.title;
+    body.textContent = media.text;
+    modal.classList.add("is-open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+    close.focus();
+  };
+
+  buttons.forEach((button, index) => {
+    button.addEventListener("click", () => openModal(index));
+  });
+
+  close.addEventListener("click", closeModal);
+
+  modal.addEventListener("click", event => {
+    if (event.target === modal) closeModal();
+  });
+
+  document.addEventListener("keydown", event => {
+    if (!modal.classList.contains("is-open")) return;
+
+    if (event.key === "Escape") {
+      event.preventDefault();
+      closeModal();
+      return;
+    }
+
+    if (event.key === "Tab") {
+      const focusables = focusableElements();
+      if (!focusables.length) return;
+      event.preventDefault();
+      focusables[0].focus();
+    }
+  });
+});

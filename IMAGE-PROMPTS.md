@@ -48,3 +48,7 @@
 
 ## Contact — Lagos
 **Prompt:** Ultra-realistic 8K cinematic aerial/editorial view of Lagos business district at refined blue hour, credible urban density, modern office architecture, subtle atmospheric depth, restrained blue-grey tonal treatment, premium corporate campaign image.
+
+
+## IMAGE PLACEMENT MAP
+See `IMAGE-PLACEMENT-MAP.md` for the page-by-page replacement map and commissioning guidance.

@@ -14,3 +14,7 @@ Because GitHub Pages has no server-side processing, the contact and career forms
 
 ## Content verification before launch
 Replace or verify any company-specific regulatory, professional-affiliation, registration or leadership information before publication. The build does not invent missing licence numbers, registration numbers or leadership identities.
+
+
+## Content / image handoff
+Use `IMAGE-PLACEMENT-MAP.md` to replace the supplied SVG editorial placeholders with commissioned photography. Keep the `.arch-frame` wrappers and descriptive alt text.

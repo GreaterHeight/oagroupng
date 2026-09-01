@@ -50,3 +50,18 @@ Reviewed the generated OA Group Nigeria static website against the supplied OA G
 The site is intentionally static and targets GitHub Pages. GitHub Pages does not provide server-side form processing, file uploads, newsletter storage or transactional email. Contact/career/newsletter submissions therefore open the visitor's configured email application. A real form endpoint should be added before production if server-side submission, attachment handling, CRM routing or newsletter subscription storage is required.
 
 The supplied specification does not provide verified CAC numbers, licence numbers or leadership identities. Those were not fabricated.
+
+
+## Final QA pass — 1 September 2026
+- Removed unfinished/replacement wording from the Gallery presentation copy.
+- Removed generic video-placeholder language from the media viewer.
+- Hardened the video modal keyboard behavior and focus restoration.
+- Revalidated JavaScript syntax and static asset references after these changes.
+
+
+## v3.0.1 User-requested refinement pass
+- Cookie consent copy expanded and aligned with current static implementation.
+- Primary navigation reduced to one Contact destination by retaining TALK TO OA GROUP and removing the duplicate Contact nav item.
+- Footer newsletter consent rebuilt as a full-width aligned row below the email controls.
+- All eight insight detail pages expanded into substantive editorial articles with related-insight links and preserved article URLs.
+- Added `IMAGE-PLACEMENT-MAP.md` documenting every intended photography/visual slot.
