@@ -47,3 +47,35 @@
     white-space: nowrap;
   }
 }
+
+/* v3.5 QA: accessible footer social icon buttons */
+.social-icon {
+  display: inline-flex;
+  width: 2.5rem;
+  height: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 2.5rem;
+  text-decoration: none;
+}
+.social-icon svg {
+  width: 1.15rem;
+  height: 1.15rem;
+  display: block;
+  fill: currentColor;
+  stroke: none;
+}
+.social-icon:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+.social-icon svg rect,
+.social-icon svg circle {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+}
+.social-icon svg circle.fill {
+  fill: currentColor;
+  stroke: none;
+}

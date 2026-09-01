@@ -130,3 +130,33 @@ body.nav-open{overflow:hidden}@media(min-width:821px){body.nav-open{overflow:aut
     white-space: nowrap;
   }
 }
+
+/* v3.5 QA: keep the Search page control row vertically aligned */
+.search-page .search-form {
+  display: flex;
+  align-items: stretch;
+}
+.search-page .search-form input[type="search"],
+.search-page .search-form input[type="text"] {
+  height: 3.25rem;
+  box-sizing: border-box;
+}
+.search-page .search-form button,
+.search-page .search-form .search-button {
+  height: 3.25rem;
+  min-height: 3.25rem;
+  box-sizing: border-box;
+  align-self: stretch;
+}
+@media (max-width: 640px) {
+  .search-page .search-form {
+    align-items: stretch;
+  }
+  .search-page .search-form input[type="search"],
+  .search-page .search-form input[type="text"],
+  .search-page .search-form button,
+  .search-page .search-form .search-button {
+    height: 3.25rem;
+    min-height: 3.25rem;
+  }
+}
