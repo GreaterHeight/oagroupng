@@ -431,3 +431,72 @@ Every image prompt in this document now includes an explicit master dimension.
 
 **Negative prompt:** generic stock photography, posed corporate team, handshake cliché, people staring at camera, fake dashboards, readable invented text, logos, watermarks, excessive blue glow, cyberpunk, neon, distorted anatomy, plastic skin, duplicated people, clutter, unrealistic Lagos skyline, fabricated landmarks, cartoon, illustration, CGI appearance
 
+
+
+# v4.8 — Body Image Prompts
+
+## About — People & Institutional Collaboration
+### `/images/about-people-collaboration.jpg` — About body image (16:9 master)
+<!-- OUTPUT FILENAME: about-people-collaboration.jpg -->
+**Placement:** `/about/` body visual section, "The Institution at Work".
+
+**Generation prompt:** Create a premium editorial photograph of Nigerian professionals from complementary business disciplines collaborating around a strategic group plan in a sophisticated contemporary corporate environment. Show natural working interaction, documents, a laptop with abstract non-readable information and a clear sense of professional judgement. Communicate coordination, institutional capability and serious decision-making rather than generic teamwork. Place the strongest human activity toward the right half and maintain calmer architectural space toward the left for responsive cropping. Natural skin tones, realistic Nigerian setting, restrained OA Group blue-grey and ivory palette, premium annual-report/editorial photography.
+
+**Technical target:** 16:9 master, minimum 3840×2160 pixels, JPG, sRGB, horizontal composition, photorealistic editorial quality, mobile-safe crop.
+
+**Negative prompt:** generic stock team photo, handshake cliché, people posing at camera, fake logos, readable invented text, fake statistics, money/currency clichés, distorted anatomy, duplicated people, plastic skin, excessive blue glow, neon, cyberpunk, cartoon, illustration, CGI.
+
+## About — Governance & Stewardship
+### `/images/about-governance-boardroom.jpg` — About body image (16:9 master)
+<!-- OUTPUT FILENAME: about-governance-boardroom.jpg -->
+**Placement:** `/about/` body visual section, "Governance in Practice".
+
+**Generation prompt:** Create a premium Nigerian corporate editorial photograph showing a small group of senior professionals conducting a thoughtful governance and strategic review in a modern executive boardroom. Include architectural detail, printed reports with abstract non-readable content, a laptop and a considered meeting dynamic. Communicate stewardship, accountability, disciplined decision-making and institutional maturity. Avoid theatrical boardroom posing. Keep the composition balanced for desktop and mobile cropping. Natural daylight, restrained OA Group palette, sophisticated business-publication realism.
+
+**Technical target:** 16:9 master, minimum 3840×2160 pixels, JPG, sRGB, horizontal composition, photorealistic editorial quality, mobile-safe crop.
+
+**Negative prompt:** staged handshake, people staring at camera, fake company names, readable documents, fake financial figures, logos, surveillance imagery, exaggerated luxury, distorted anatomy, duplicated people, plastic skin, neon, cartoon, illustration, CGI.
+
+## Our Companies — Portfolio in Practice
+### `/images/companies-portfolio-in-action.jpg` — Our Companies body image (16:9 master)
+<!-- OUTPUT FILENAME: companies-portfolio-in-action.jpg -->
+**Placement:** `/our-companies/` body visual section, "The Portfolio in Practice".
+
+**Generation prompt:** Create a premium documentary-style Nigerian business photograph representing a diversified specialist-company portfolio operating as one coordinated institutional ecosystem. Show a sophisticated business environment with professionals from different disciplines engaged naturally in work, with subtle visual cues of assurance, consulting, property, finance and commercial project delivery. Do not create a literal collage; the disciplines should feel connected through the environment and human activity. Place strongest activity toward the right and maintain calm space for responsive cropping. Natural light, authentic Nigerian context, restrained OA Group blue-grey and ivory palette, premium annual-report photography.
+
+**Technical target:** 16:9 master, minimum 3840×2160 pixels, JPG, sRGB, horizontal composition, photorealistic editorial quality, mobile-safe crop.
+
+**Negative prompt:** generic stock montage, posed team photo, handshake cliché, fake logos, readable invented text, fake dashboards, money clichés, distorted anatomy, duplicated people, plastic skin, excessive blue glow, neon, cartoon, illustration, CGI.
+
+## Our Companies — Assurance & Advisory
+### `/images/company-assurance-advisory.jpg` — Portfolio capability image (16:9 master)
+<!-- OUTPUT FILENAME: company-assurance-advisory.jpg -->
+**Placement:** `/our-companies/` specialist capability visual grid.
+
+**Generation prompt:** Create a premium editorial photograph of Nigerian assurance and business advisory professionals reviewing business information, controls and strategic recommendations in a contemporary professional-services office. Show authentic collaboration, reports with non-readable content and a serious but constructive decision-making environment. Communicate professional judgement, accuracy and confidence. Natural light, restrained OA Group palette, sophisticated corporate-publication realism.
+
+**Technical target:** 16:9 master, minimum 3840×2160 pixels, JPG, sRGB, horizontal composition, mobile-safe crop.
+
+**Negative prompt:** generic stock photo, handshake cliché, readable documents, fake credentials, logos, fake statistics, distorted anatomy, duplicated people, plastic skin, neon, cartoon, illustration, CGI.
+
+## Our Companies — Property & Development
+### `/images/company-property-development.jpg` — Portfolio capability image (16:9 master)
+<!-- OUTPUT FILENAME: company-property-development.jpg -->
+**Placement:** `/our-companies/` specialist capability visual grid.
+
+**Generation prompt:** Create a premium Nigerian real-estate editorial photograph showing property professionals reviewing development plans and a credible contemporary building project. Include architectural drawings, a laptop with abstract non-readable information and authentic Nigerian urban context. Communicate property investment, development discipline and asset stewardship rather than luxury lifestyle advertising. Natural light, sophisticated restrained grading, realistic architecture and human interaction.
+
+**Technical target:** 16:9 master, minimum 3840×2160 pixels, JPG, sRGB, horizontal composition, mobile-safe crop.
+
+**Negative prompt:** luxury-property advertisement, fantasy skyline, fabricated landmarks, readable plans, fake company names, logos, money clichés, distorted anatomy, duplicated people, plastic skin, neon, cartoon, illustration, CGI.
+
+## Our Companies — Finance & Commercial Delivery
+### `/images/company-finance-commercial.jpg` — Portfolio capability image (16:9 master)
+<!-- OUTPUT FILENAME: company-finance-commercial.jpg -->
+**Placement:** `/our-companies/` specialist capability visual grid.
+
+**Generation prompt:** Create a premium Nigerian commercial editorial photograph showing financial-services and project-delivery professionals coordinating a business transaction or commercial project. Include a credible modern office or project environment, non-readable financial/project documents and natural collaborative interaction. Communicate financial discipline, execution and commercial value without showing cash or currency clichés. Restrained OA Group palette, natural light, premium annual-report photography.
+
+**Technical target:** 16:9 master, minimum 3840×2160 pixels, JPG, sRGB, horizontal composition, mobile-safe crop.
+
+**Negative prompt:** money piles, currency close-ups, generic stock photo, handshake cliché, readable figures, fake dashboards, logos, distorted anatomy, duplicated people, plastic skin, neon, cartoon, illustration, CGI.

@@ -600,3 +600,77 @@ body.nav-open{overflow:hidden}@media(min-width:821px){body.nav-open{overflow:aut
     line-height:1.4;
   }
 }
+
+
+/* v4.7 — mobile header logo visibility
+   Keep the supplied OA Group brand mark as a non-shrinking header asset.
+   The previous flex rule allowed the logo box to participate in available
+   width calculations; this explicit rule makes the brand width deterministic
+   on narrow screens without affecting the hamburger control. */
+@media (max-width: 960px){
+  .site-header .nav{
+    flex-wrap:nowrap;
+  }
+  .site-header .brand{
+    display:inline-flex;
+    flex:0 0 auto;
+    width:auto;
+    min-width:0;
+    max-width:none;
+    overflow:visible;
+  }
+  .site-header .brand img{
+    display:block;
+    width:clamp(118px,30vw,142px);
+    height:auto;
+    max-width:none;
+    max-height:none;
+    object-fit:contain;
+    visibility:visible;
+    opacity:1;
+  }
+  .site-header .nav-toggle{
+    flex:0 0 44px;
+  }
+}
+
+@media (max-width: 560px){
+  .site-header .brand img{
+    width:122px;
+  }
+}
+
+/* v4.8 — taller inner-page heroes for safer human subject framing */
+.page-hero{min-height:460px;}
+.page-hero__grid{min-height:460px;}
+.page-hero .arch-frame > img{object-position:center 38%;}
+
+@media (max-width:900px){
+  .page-hero{min-height:410px;}
+  .page-hero__grid{min-height:410px;}
+  .page-hero .arch-frame > img{object-position:center 38%;}
+}
+@media (max-width:560px){
+  .page-hero{min-height:370px;}
+  .page-hero__grid{min-height:370px;}
+  .page-hero .arch-frame > img{object-position:center 34%;}
+}
+
+/* v4.8 — editorial body-image system */
+.visual-break{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(30px,6vw,80px);align-items:center;}
+.visual-break--reverse{grid-template-columns:.95fr 1.05fr;}
+.visual-break__media .arch-frame{aspect-ratio:16/9;border:1px solid var(--oa-border);box-shadow:var(--oa-shadow-soft);}
+.visual-break__copy{max-width:620px;}
+.visual-break__copy h2{margin-bottom:16px;}
+.visual-break__copy p:last-child{margin-bottom:0;}
+.visual-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.visual-card{background:#fff;border:1px solid var(--oa-border);overflow:hidden;}
+.visual-card .arch-frame{aspect-ratio:16/10;}
+.visual-card__body{padding:20px 22px 22px;}
+.visual-card__body h3{font-size:28px;margin-bottom:8px;}
+.visual-card__body p{color:var(--oa-muted);font-size:16px;margin-bottom:0;}
+@media (max-width:900px){
+  .visual-break,.visual-break--reverse{grid-template-columns:1fr;}
+  .visual-break__copy{max-width:none;}
+  .visual-grid{grid-template-columns:1fr;}
+}

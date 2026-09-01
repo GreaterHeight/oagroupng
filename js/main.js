@@ -32,6 +32,11 @@
 
   const markImageUnavailable = (img) => {
     if (!isSiteImage(img) || img.dataset.imageFallbackApplied === "true") return;
+
+    // Header and loader logos are supplied brand assets, not content-image
+    // frames. Never remove them through the generic placeholder mechanism.
+    if (img.closest(".brand") || img.classList.contains("site-loader__logo")) return;
+
     img.dataset.imageFallbackApplied = "true";
 
     const frame = img.closest(".arch-frame");
