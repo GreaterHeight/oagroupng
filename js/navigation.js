@@ -9,3 +9,18 @@ document.addEventListener("DOMContentLoaded",()=>{
   const setCurrent=()=>{const currentPath=window.location.pathname.replace(/index\.html$/,'').replace(/\/$/,'')||'/';menu.querySelectorAll("a").forEach(a=>{const target=new URL(a.href,window.location.origin).pathname.replace(/\/$/,'')||'/';if(target===currentPath)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current")})};
   setCurrent();
 });
+
+
+/* v4.4 responsive breakpoint */
+window.addEventListener("resize",()=>{
+  if(window.innerWidth>960){
+    const toggle=document.querySelector(".nav-toggle");
+    const menu=document.querySelector(".nav-links");
+    if(toggle&&menu){
+      menu.classList.remove("is-open");
+      toggle.setAttribute("aria-expanded","false");
+      toggle.setAttribute("aria-label","Open navigation");
+      document.body.classList.remove("nav-open");
+    }
+  }
+},{passive:true});

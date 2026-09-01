@@ -1,3 +1,25 @@
+
+/* v4.4 — OA Group logo loading spinner / throbber */
+(() => {
+  "use strict";
+  const hideLoader = () => {
+    const loader = document.querySelector("[data-site-loader]");
+    if (!loader || loader.classList.contains("is-hidden")) return;
+    loader.classList.add("is-hidden");
+    window.setTimeout(() => loader.remove(), 420);
+  };
+
+  if (document.readyState === "complete") {
+    window.requestAnimationFrame(hideLoader);
+  } else {
+    window.addEventListener("load", hideLoader, { once: true });
+  }
+
+  // Safety valve: never trap a visitor behind the loader because one resource
+  // is slow or fails. This is intentionally generous for mobile connections.
+  window.setTimeout(hideLoader, 8000);
+})();
+
 /* v4.2 — CSP-safe placeholder-first image fallback */
 (() => {
   "use strict";

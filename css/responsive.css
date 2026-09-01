@@ -47,3 +47,19 @@
     white-space: nowrap;
   }
 }
+
+/* v4.3 — compact inner hero on smaller screens */
+@media (max-width: 900px){
+  .page-hero{min-height:360px}
+  .page-hero__grid{min-height:360px}
+  .page-hero__grid > div:first-child{width:100%;padding:58px 0}
+  .page-hero > .container:not(.page-hero__grid){min-height:360px;padding-top:58px;padding-bottom:58px}
+  .page-hero .arch-frame::after{background:linear-gradient(90deg,rgba(7,17,38,.88),rgba(7,17,38,.62))}
+}
+@media (max-width: 600px){
+  .page-hero{min-height:330px}
+  .page-hero__grid{min-height:330px}
+  .page-hero__grid > div:first-child{padding:48px 0}
+  .page-hero > .container:not(.page-hero__grid){min-height:330px;padding-top:48px;padding-bottom:48px}
+  .page-hero .arch-frame::after{background:rgba(7,17,38,.72)}
+}
