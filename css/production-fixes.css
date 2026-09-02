@@ -928,3 +928,39 @@ body.nav-open{overflow:hidden}@media(min-width:821px){body.nav-open{overflow:aut
 .page-hero .arch-frame.is-placeholder-pending > img{display:none;}
 .page-hero .arch-frame.is-empty::after,
 .page-hero .arch-frame.is-placeholder-pending::after{display:none !important;}
+
+/* v4.14 — placeholder-state hero content contrast
+   When the hero photograph is unavailable, the hero background becomes the
+   light approved placeholder. The editorial copy must therefore switch from
+   white-on-image to dark ink, while retaining the same layout. */
+.page-hero:has(.arch-frame.is-placeholder-pending) .page-hero__grid > div:first-child,
+.page-hero:has(.arch-frame.is-empty) .page-hero__grid > div:first-child{
+  color:var(--oa-ink);
+}
+.page-hero:has(.arch-frame.is-placeholder-pending) h1,
+.page-hero:has(.arch-frame.is-placeholder-pending) .lede,
+.page-hero:has(.arch-frame.is-placeholder-pending) .eyebrow,
+.page-hero:has(.arch-frame.is-empty) h1,
+.page-hero:has(.arch-frame.is-empty) .lede,
+.page-hero:has(.arch-frame.is-empty) .eyebrow{
+  color:var(--oa-ink);
+  text-shadow:none;
+}
+.page-hero:has(.arch-frame.is-placeholder-pending) .eyebrow,
+.page-hero:has(.arch-frame.is-empty) .eyebrow{
+  opacity:1;
+}
+.page-hero:has(.arch-frame.is-placeholder-pending) .lede,
+.page-hero:has(.arch-frame.is-empty) .lede{
+  opacity:1;
+}
+
+/* v4.14 — fallback for browsers without :has() */
+.page-hero.has-placeholder-image .page-hero__grid > div:first-child,
+.page-hero.has-placeholder-image h1,
+.page-hero.has-placeholder-image .lede,
+.page-hero.has-placeholder-image .eyebrow{
+  color:var(--oa-ink);
+  text-shadow:none;
+  opacity:1;
+}

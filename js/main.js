@@ -44,6 +44,8 @@
 
     if (frame) {
       frame.classList.add("is-empty");
+      const hero = frame.closest(".page-hero");
+      if (hero) hero.classList.add("has-placeholder-image");
       img.remove();
       return;
     }
@@ -80,15 +82,20 @@
       }
 
       frame.classList.add("is-placeholder-pending");
+      const hero = frame.closest(".page-hero");
+      if (hero) hero.classList.add("has-placeholder-image");
+
       if (img.dataset.placeholderListeners === "true") return;
       img.dataset.placeholderListeners = "true";
 
       img.addEventListener("load", () => {
         frame.classList.remove("is-placeholder-pending", "is-empty");
+        if (hero) hero.classList.remove("has-placeholder-image");
       }, { once: true });
 
       img.addEventListener("error", () => {
         frame.classList.remove("is-placeholder-pending");
+        if (hero) hero.classList.add("has-placeholder-image");
         markImageUnavailable(img);
       }, { once: true });
     });
