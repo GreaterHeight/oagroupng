@@ -67,23 +67,26 @@
   // Deferred scripts can execute after an eager image has already failed.
   // Scan completed images once DOM parsing is complete to catch that case.
   const preparePlaceholderImages = () => {
-    // Placeholder-first assets begin in a deterministic pending state.
-    // A successful load removes the state; a failed load keeps it.
+    // Placeholder-first assets visibly occupy the image frame while the JPG
+    // resolves. A successful load removes the state; a failed load converts
+    // it to the permanent empty state.
     document.querySelectorAll('img[data-placeholder-image="true"]').forEach((img) => {
       const frame = img.closest(".arch-frame");
       if (!frame) return;
 
       if (img.complete && img.naturalWidth > 0) {
-        frame.classList.remove("is-empty");
-        frame.classList.remove("is-placeholder-pending");
+        frame.classList.remove("is-empty", "is-placeholder-pending");
         return;
       }
 
       frame.classList.add("is-placeholder-pending");
+      if (img.dataset.placeholderListeners === "true") return;
+      img.dataset.placeholderListeners = "true";
+
       img.addEventListener("load", () => {
-        frame.classList.remove("is-placeholder-pending");
-        frame.classList.remove("is-empty");
+        frame.classList.remove("is-placeholder-pending", "is-empty");
       }, { once: true });
+
       img.addEventListener("error", () => {
         frame.classList.remove("is-placeholder-pending");
         markImageUnavailable(img);

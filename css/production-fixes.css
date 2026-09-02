@@ -880,3 +880,51 @@ body.nav-open{overflow:hidden}@media(min-width:821px){body.nav-open{overflow:aut
 .office-location .contact-address{
   max-width:520px;
 }
+
+/* v4.13 — canonical, visible page-hero placeholder */
+.page-hero .arch-frame{
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+}
+.page-hero .arch-frame > img{position:relative;z-index:1;}
+.page-hero .arch-frame .arch-frame-placeholder{
+  position:absolute;
+  inset:0;
+  z-index:5;
+  display:none;
+  place-items:center;
+  align-content:center;
+  justify-items:center;
+  gap:12px;
+  padding:24px;
+  box-sizing:border-box;
+  background:var(--oa-primary-50);
+  color:var(--oa-primary-700);
+  text-align:center;
+}
+.page-hero .arch-frame .arch-frame-placeholder__icon{
+  display:grid;
+  place-items:center;
+  width:54px;
+  height:54px;
+  border:1px solid currentColor;
+  border-radius:4px;
+  opacity:.85;
+}
+.page-hero .arch-frame .arch-frame-placeholder__icon svg{width:30px;height:30px;}
+.page-hero .arch-frame .arch-frame-placeholder__label{
+  display:block;
+  max-width:360px;
+  font-family:var(--oa-font-sans,Arial,sans-serif);
+  font-size:11px;
+  line-height:1.55;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.page-hero .arch-frame.is-empty .arch-frame-placeholder,
+.page-hero .arch-frame.is-placeholder-pending .arch-frame-placeholder{display:grid;}
+.page-hero .arch-frame.is-empty > img,
+.page-hero .arch-frame.is-placeholder-pending > img{display:none;}
+.page-hero .arch-frame.is-empty::after,
+.page-hero .arch-frame.is-placeholder-pending::after{display:none !important;}
