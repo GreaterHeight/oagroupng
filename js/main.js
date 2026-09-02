@@ -72,11 +72,21 @@
     });
   };
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", scanCompletedImages, { once: true });
-  } else {
+  const rescanImages = () => {
     scanCompletedImages();
+    window.setTimeout(scanCompletedImages, 0);
+    window.setTimeout(scanCompletedImages, 250);
+  };
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", rescanImages, { once: true });
+  } else {
+    rescanImages();
   }
+
+  // A failed eager image can complete between DOM parsing and load. Scan again
+  // after the complete page load so the placeholder is deterministic.
+  window.addEventListener("load", scanCompletedImages, { once: true });
 })();
 
 document.addEventListener("DOMContentLoaded",()=>{

@@ -749,3 +749,82 @@ body.nav-open{overflow:hidden}@media(min-width:821px){body.nav-open{overflow:aut
   visibility:visible;
   opacity:1;
 }
+
+/* v4.10 — restrained OA Group brand sizing */
+.site-header .brand{
+  width:124px;
+  min-width:124px;
+  max-width:124px;
+  height:58px;
+}
+.site-header .brand img{
+  width:108px;
+  max-width:108px;
+  height:auto;
+}
+.footer-brand img{
+  width:112px;
+  max-width:100%;
+  height:auto;
+}
+.site-loader__mark{
+  width:72px;
+  height:72px;
+}
+.site-loader__logo{
+  display:block;
+  width:40px;
+  height:40px;
+  max-width:40px;
+  max-height:40px;
+  object-fit:contain;
+  background:#fff;
+  border-radius:3px;
+}
+@media (max-width:960px){
+  .site-header .brand{
+    width:116px;
+    min-width:116px;
+    max-width:116px;
+    height:54px;
+  }
+  .site-header .brand img{
+    width:102px;
+    max-width:102px;
+  }
+}
+@media (max-width:560px){
+  .site-header .brand{
+    width:110px;
+    min-width:110px;
+    max-width:110px;
+    height:52px;
+  }
+  .site-header .brand img{
+    width:96px;
+    max-width:96px;
+  }
+}
+
+/* v4.10 — guaranteed hero placeholder presentation */
+.page-hero .arch-frame.is-empty .arch-frame-placeholder{
+  display:grid;
+  position:absolute;
+  inset:0;
+  z-index:1;
+  min-height:0;
+  background:var(--oa-primary-50);
+  color:var(--oa-primary-700);
+}
+.page-hero .arch-frame.is-empty::after{
+  z-index:2;
+  background:rgba(7,17,38,.94);
+}
+.page-hero .arch-frame-placeholder__icon,
+.page-hero .arch-frame-placeholder__label{
+  position:relative;
+  z-index:3;
+}
+.page-hero .arch-frame-placeholder__label{
+  max-width:420px;
+}
