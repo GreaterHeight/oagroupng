@@ -972,3 +972,24 @@ body.nav-open{overflow:hidden}@media(min-width:821px){body.nav-open{overflow:aut
   position:relative;
   z-index:2;
 }
+
+/* v4.16 — footer address placement: directly beneath social icons */
+.site-footer .footer-address{
+  margin:14px 0 0;
+  max-width:320px;
+  line-height:1.55;
+}
+
+/* v4.17 — Address scope: footer Contact & Social + Contact page only */
+.footer-address{
+  display:block;
+  margin:1rem 0 0;
+  max-width:28rem;
+  font-size:.85rem;
+  line-height:1.6;
+}
+.contact__address{
+  max-width:38rem;
+  line-height:1.7;
+  margin:0 0 1.5rem;
+}
