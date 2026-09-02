@@ -964,3 +964,11 @@ body.nav-open{overflow:hidden}@media(min-width:821px){body.nav-open{overflow:aut
   text-shadow:none;
   opacity:1;
 }
+
+/* v4.15 — Solutions Matrix keyboard focus */
+.matrix__tab:focus-visible{
+  outline:3px solid var(--oa-primary-300);
+  outline-offset:-3px;
+  position:relative;
+  z-index:2;
+}

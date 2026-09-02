@@ -172,6 +172,72 @@ document.addEventListener("DOMContentLoaded",()=>{
   }));
 });
 
+
+/* v4.15 — Home-page Solutions Matrix tabs
+   The existing markup exposes aria-controls relationships between each tab
+   and panel. This controller makes those controls interactive, updates ARIA
+   state, and provides keyboard navigation without hardcoding panel content. */
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".matrix").forEach(function (matrix) {
+    const tabs = Array.from(matrix.querySelectorAll(".matrix__tab[data-solution-tab]"));
+    const panels = Array.from(matrix.querySelectorAll(".matrix__panel[data-solution-panel]"));
+    if (!tabs.length || !panels.length) return;
+
+    const activate = function (tab, moveFocus) {
+      const targetId = tab.getAttribute("aria-controls");
+      const target = targetId ? matrix.querySelector("#" + CSS.escape(targetId)) : null;
+      if (!target) return;
+
+      tabs.forEach(function (item) {
+        const selected = item === tab;
+        item.setAttribute("aria-selected", selected ? "true" : "false");
+        item.setAttribute("tabindex", selected ? "0" : "-1");
+      });
+
+      panels.forEach(function (panel) {
+        const visible = panel === target;
+        panel.hidden = !visible;
+        panel.setAttribute("aria-hidden", visible ? "false" : "true");
+      });
+
+      if (moveFocus) tab.focus();
+    };
+
+    const initiallySelected =
+      tabs.find(function (tab) {
+        return tab.getAttribute("aria-selected") === "true";
+      }) || tabs[0];
+
+    activate(initiallySelected, false);
+
+    tabs.forEach(function (tab, index) {
+      tab.addEventListener("click", function () {
+        activate(tab, false);
+      });
+
+      tab.addEventListener("keydown", function (event) {
+        const keys = ["ArrowRight", "ArrowDown", "ArrowLeft", "ArrowUp", "Home", "End"];
+        if (!keys.includes(event.key)) return;
+
+        event.preventDefault();
+
+        let nextIndex = index;
+        if (event.key === "ArrowRight" || event.key === "ArrowDown") {
+          nextIndex = (index + 1) % tabs.length;
+        } else if (event.key === "ArrowLeft" || event.key === "ArrowUp") {
+          nextIndex = (index - 1 + tabs.length) % tabs.length;
+        } else if (event.key === "Home") {
+          nextIndex = 0;
+        } else if (event.key === "End") {
+          nextIndex = tabs.length - 1;
+        }
+
+        activate(tabs[nextIndex], true);
+      });
+    });
+  });
+});
+
 /* v3.7.3 — Insights article cards */
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".insight-card").forEach(function (card) {
