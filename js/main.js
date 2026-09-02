@@ -66,6 +66,31 @@
 
   // Deferred scripts can execute after an eager image has already failed.
   // Scan completed images once DOM parsing is complete to catch that case.
+  const preparePlaceholderImages = () => {
+    // Placeholder-first assets begin in a deterministic pending state.
+    // A successful load removes the state; a failed load keeps it.
+    document.querySelectorAll('img[data-placeholder-image="true"]').forEach((img) => {
+      const frame = img.closest(".arch-frame");
+      if (!frame) return;
+
+      if (img.complete && img.naturalWidth > 0) {
+        frame.classList.remove("is-empty");
+        frame.classList.remove("is-placeholder-pending");
+        return;
+      }
+
+      frame.classList.add("is-placeholder-pending");
+      img.addEventListener("load", () => {
+        frame.classList.remove("is-placeholder-pending");
+        frame.classList.remove("is-empty");
+      }, { once: true });
+      img.addEventListener("error", () => {
+        frame.classList.remove("is-placeholder-pending");
+        markImageUnavailable(img);
+      }, { once: true });
+    });
+  };
+
   const scanCompletedImages = () => {
     document.querySelectorAll('img[src^="/images/"]').forEach((img) => {
       if (img.complete && img.naturalWidth === 0) markImageUnavailable(img);
@@ -73,9 +98,16 @@
   };
 
   const rescanImages = () => {
+    preparePlaceholderImages();
     scanCompletedImages();
-    window.setTimeout(scanCompletedImages, 0);
-    window.setTimeout(scanCompletedImages, 250);
+    window.setTimeout(() => {
+      preparePlaceholderImages();
+      scanCompletedImages();
+    }, 0);
+    window.setTimeout(() => {
+      preparePlaceholderImages();
+      scanCompletedImages();
+    }, 250);
   };
 
   if (document.readyState === "loading") {
