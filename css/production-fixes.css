@@ -1047,26 +1047,32 @@ body.nav-open{overflow:hidden}@media(min-width:821px){body.nav-open{overflow:aut
   .oa-whatsapp-chat svg{width:28px;height:28px}
 }
 
-/* v4.19 — Visit OA Group spacing
-   Tighten the oversized office/location section on Our Companies and Careers.
-   Scope is limited to these page roots and the Visit OA Group heading. */
-body:has(.page-hero) .visit-office,
-.page-our-companies .visit-office,
-.page-careers .visit-office{
-  min-height:auto;
+/* v4.20 — Visit OA Group spacing: corrected selectors
+   Matches the actual section markup on /our-companies/ and /careers/. */
+.office-location.visit-office {
+  min-height: 0;
+  padding: 48px 0 52px;
 }
 
-.visit-office{
-  padding-block:clamp(3.5rem, 7vw, 6rem);
+.office-location.visit-office .section-heading {
+  margin-bottom: 0;
+  align-items: center;
 }
 
-.visit-office .section-head,
-.visit-office > .container > .section-head{
-  margin-bottom:clamp(2rem, 4vw, 3.25rem);
+.office-location.visit-office .section-heading > div:last-child {
+  display: none;
 }
 
-@media (max-width:767px){
-  .visit-office{
-    padding-block:3rem;
+.office-location.visit-office .eyebrow {
+  margin-bottom: 8px;
+}
+
+.office-location.visit-office h2 {
+  margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  .office-location.visit-office {
+    padding: 38px 0 42px;
   }
 }
