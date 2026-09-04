@@ -63,3 +63,15 @@
   .page-hero > .container:not(.page-hero__grid){min-height:330px;padding-top:48px;padding-bottom:48px}
   .page-hero .arch-frame::after{background:rgba(7,17,38,.72)}
 }
+
+@media(max-width:900px){
+  .leadership-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .leadership-principals__heading{display:block;}
+  .leadership-principals__heading > div:last-child{margin-top:16px;}
+}
+@media(max-width:600px){
+  .leadership-grid{grid-template-columns:1fr;gap:38px;}
+  .leader-card__image{aspect-ratio:4/5;}
+  .leader-card__body{padding-left:0;padding-right:0;}
+  .leader-card__body h3{font-size:28px;}
+}

@@ -1155,3 +1155,136 @@ body.nav-open{overflow:hidden}@media(min-width:821px){body.nav-open{overflow:aut
 .careers-story-grid__tiles figure{position:relative;margin:0;aspect-ratio:16/10;overflow:hidden;background:#eaf5f1}
 .careers-story-grid .image-placeholder{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:1rem;text-align:center;font-size:.85rem;letter-spacing:.04em;color:#42645d;background:#eaf5f1}
 @media (max-width:767px){.careers-story-grid__layout{grid-template-columns:1fr}.careers-story-grid__tiles{grid-template-columns:1fr}}
+
+/* v4.23 — Leadership principals section */
+.leadership-principals__heading {
+  align-items: end;
+  margin-bottom: 46px;
+}
+.leadership-principals__heading > div:last-child {
+  max-width: 600px;
+}
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+.leader-card {
+  min-width: 0;
+  background: #fff;
+  text-align: center;
+}
+.leader-card__image {
+  aspect-ratio: 1 / 1;
+  background: var(--oa-primary-900);
+  border-radius: 10px;
+}
+.leader-card__image img {
+  object-position: 50% 18%;
+}
+.leader-card:nth-child(2) .leader-card__image img {
+  object-position: 50% 14%;
+}
+.leader-card:nth-child(3) .leader-card__image img {
+  object-position: 50% 16%;
+}
+.leader-card__body {
+  padding: 18px 8px 4px;
+}
+.leader-card__body h3 {
+  margin: 0 0 3px;
+  color: var(--oa-primary-900);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(24px, 2.1vw, 31px);
+  line-height: 1.15;
+  font-weight: 500;
+}
+.leader-card__body h3 span {
+  white-space: nowrap;
+}
+.leader-card__role {
+  margin-bottom: 13px;
+  font-family: Cinzel, serif;
+  font-size: 10px;
+  line-height: 1.5;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: #c74354;
+}
+.leader-card__body p {
+  margin: 0 auto;
+  max-width: 350px;
+  color: var(--oa-muted);
+  font-size: 16px;
+  line-height: 1.7;
+}
+.leader-card__body .leader-card__pending {
+  color: var(--oa-muted);
+  font-style: italic;
+}
+.leader-card__image .arch-frame-placeholder {
+  min-height: 0;
+  height: 100%;
+}
+
+/* v4.24 — single-line desktop navigation: CTA + Search stay with primary items */
+@media (min-width:1051px){
+  .nav{
+    gap:16px;
+    align-items:center;
+  }
+  .brand{
+    min-width:124px;
+    flex:0 0 124px;
+  }
+  .brand img{
+    width:118px;
+    max-height:48px;
+  }
+  .nav-links{
+    max-width:none!important;
+    flex:1 1 auto;
+    min-width:0;
+    margin-left:auto;
+    display:flex;
+    flex-wrap:nowrap!important;
+    align-items:center;
+    justify-content:flex-end;
+    gap:10px;
+    row-gap:0;
+    column-gap:10px;
+    white-space:nowrap;
+  }
+  .nav-links > a,
+  .nav-links .nav-dropdown,
+  .nav-links .nav-dropdown__trigger{
+    flex:0 0 auto;
+    white-space:nowrap;
+  }
+  .nav-links > a,
+  .nav-links .nav-dropdown__trigger{
+    font-size:11px;
+    letter-spacing:.09em;
+    padding-left:3px;
+    padding-right:3px;
+  }
+  .nav-links .nav-dropdown__trigger{gap:4px;}
+  .nav-links .nav-cta{
+    flex:0 0 auto;
+    margin-left:4px;
+    padding:11px 13px!important;
+    font-size:10px;
+    letter-spacing:.09em;
+  }
+  .nav-links .nav-search-icon{
+    flex:0 0 38px;
+    width:38px;
+    height:38px;
+    margin-left:0;
+  }
+}
+
+/* Keep the tablet/mobile navigation clean rather than forcing a cramped desktop row. */
+@media (max-width:1050px){
+  .nav-links{flex-wrap:nowrap!important;}
+}
