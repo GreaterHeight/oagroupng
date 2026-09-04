@@ -1288,3 +1288,239 @@ body.nav-open{overflow:hidden}@media(min-width:821px){body.nav-open{overflow:aut
 @media (max-width:1050px){
   .nav-links{flex-wrap:nowrap!important;}
 }
+
+
+/* v4.25 — Leadership profile read-more modal */
+.leadership-principals .leadership-grid {
+  align-items:stretch;
+}
+.leader-card__read-more {
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin-top:12px;
+  padding:0;
+  border:0;
+  background:transparent;
+  color:var(--oa-primary);
+  font-family:Cinzel,serif;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  cursor:pointer;
+}
+.leader-card__read-more::after {
+  content:'→';
+  font-family:Arial,sans-serif;
+  font-size:15px;
+  transition:transform 180ms ease;
+}
+.leader-card__read-more:hover::after,
+.leader-card__read-more:focus-visible::after {
+  transform:translateX(4px);
+}
+.leader-card__read-more:focus-visible {
+  outline:3px solid var(--oa-primary-200);
+  outline-offset:5px;
+}
+.leadership-modal {
+  padding:0;
+  align-items:stretch;
+  justify-content:stretch;
+  background:rgba(31,37,50,.72);
+  backdrop-filter:blur(2px);
+}
+.leadership-modal.is-open {
+  display:flex;
+}
+.leadership-modal__dialog {
+  position:relative;
+  width:min(1180px,calc(100vw - 48px));
+  max-height:min(760px,calc(100vh - 48px));
+  margin:auto;
+  display:grid;
+  grid-template-columns:minmax(280px,.38fr) minmax(0,.82fr);
+  overflow:hidden;
+  background:#fff;
+  box-shadow:0 30px 80px rgba(0,0,0,.28);
+}
+.leadership-modal__aside {
+  min-width:0;
+  padding:30px 24px 28px;
+  background:#f4f4f3;
+  border-right:1px solid #dededb;
+  overflow:auto;
+}
+.leadership-modal__portrait {
+  aspect-ratio:4/5;
+  background:var(--oa-primary-900);
+  max-height:560px;
+}
+.leadership-modal__portrait img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.leadership-modal__portrait .arch-frame-placeholder {
+  display:none;
+}
+.leadership-modal__portrait.is-empty .arch-frame-placeholder {
+  display:grid;
+}
+.leadership-modal__contact {
+  margin-top:26px;
+}
+.leadership-modal__accent {
+  width:38px;
+  height:3px;
+  background:var(--oa-primary);
+  margin-bottom:18px;
+}
+.leadership-modal__contact .eyebrow {
+  margin-bottom:16px;
+  color:var(--oa-primary);
+}
+.leadership-modal__contact-links {
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+.leadership-modal__contact-link {
+  display:inline-flex;
+  align-items:center;
+  min-height:38px;
+  padding:8px 12px;
+  border:1px solid var(--oa-primary-900);
+  color:var(--oa-primary-900);
+  font-family:Cinzel,serif;
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+.leadership-modal__content {
+  min-width:0;
+  padding:48px 62px 56px;
+  overflow:auto;
+  scrollbar-width:thin;
+}
+.leadership-modal__content .eyebrow {
+  margin-bottom:14px;
+  color:var(--oa-primary);
+}
+.leadership-modal__content h2 {
+  max-width:850px;
+  margin-bottom:8px;
+  font-size:clamp(48px,5vw,70px);
+  font-weight:400;
+  color:#151515;
+}
+.leadership-modal__role {
+  color:#a82424;
+  font-family:Arial,sans-serif;
+  font-size:16px;
+  font-weight:700;
+  line-height:1.5;
+}
+.leadership-modal__rule {
+  width:48px;
+  height:3px;
+  background:#b22222;
+  margin:32px 0 30px;
+}
+.leadership-modal__label {
+  margin-bottom:18px;
+  color:#1c1c1c;
+  font-family:Cinzel,serif;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+}
+.leadership-modal__bio {
+  max-width:760px;
+  color:#3c3c3c;
+  font-family:Arial,sans-serif;
+  font-size:16px;
+  line-height:1.8;
+  white-space:pre-line;
+}
+.leadership-modal__additional {
+  margin-top:30px;
+  padding-top:24px;
+  border-top:1px solid #dededb;
+}
+.leadership-modal__close {
+  position:absolute;
+  z-index:5;
+  top:20px;
+  right:18px;
+  width:44px;
+  height:44px;
+  border:1px solid #d7d7d3;
+  border-radius:50%;
+  background:#fff;
+  color:#111;
+  font-family:Arial,sans-serif;
+  font-size:30px;
+  font-weight:300;
+  line-height:1;
+  display:grid;
+  place-items:center;
+}
+.leadership-modal__close:hover {
+  background:#f5f5f3;
+}
+.leadership-modal__close:focus-visible {
+  outline:3px solid var(--oa-primary-200);
+  outline-offset:3px;
+}
+@media (max-width:900px) {
+  .leadership-modal__dialog {
+    width:min(100vw - 24px,760px);
+    max-height:calc(100vh - 24px);
+    grid-template-columns:1fr;
+    overflow:auto;
+  }
+  .leadership-modal__aside {
+    border-right:0;
+    border-bottom:1px solid #dededb;
+    padding:24px;
+  }
+  .leadership-modal__portrait {
+    max-height:420px;
+    aspect-ratio:16/10;
+  }
+  .leadership-modal__content {
+    overflow:visible;
+    padding:38px 28px 44px;
+  }
+}
+@media (max-width:560px) {
+  .leadership-modal {
+    padding:12px;
+  }
+  .leadership-modal__dialog {
+    width:100%;
+    max-height:calc(100vh - 24px);
+  }
+  .leadership-modal__aside {
+    padding:20px;
+  }
+  .leadership-modal__portrait {
+    aspect-ratio:4/5;
+    max-height:none;
+  }
+  .leadership-modal__content {
+    padding:34px 22px 38px;
+  }
+  .leadership-modal__content h2 {
+    font-size:42px;
+    padding-right:28px;
+  }
+  .leadership-modal__close {
+    top:12px;
+    right:12px;
+  }
+}
