@@ -1,90 +1,137 @@
-/* v4.25 — Leadership profile modal */
+/* v4.27 — Leadership profile modal. Full editorial profile window; no image-only lightbox behavior. */
 document.addEventListener("DOMContentLoaded", () => {
-  const modal = document.querySelector("#leadership-profile-modal");
+  const modal = document.getElementById("leadership-profile-modal");
   if (!modal) return;
 
-  const dialog = modal.querySelector(".leadership-modal__dialog");
+  const dialog = modal.querySelector(".leadership-profile-modal__dialog");
   const close = modal.querySelector("[data-leadership-close]");
   const image = modal.querySelector("[data-leadership-image]");
-  const imageFrame = modal.querySelector(".leadership-modal__portrait");
+  const imageFrame = modal.querySelector(".leadership-profile-modal__portrait");
   const name = modal.querySelector("[data-leadership-name]");
   const role = modal.querySelector("[data-leadership-role]");
   const bio = modal.querySelector("[data-leadership-bio]");
-  const contact = modal.querySelector("[data-leadership-contact]");
   const contactLinks = modal.querySelector("[data-leadership-contact-links]");
+  const additional = modal.querySelector("[data-leadership-additional]");
   const triggers = [...document.querySelectorAll("[data-leadership-open]")];
-  if (!dialog || !close || !image || !imageFrame || !name || !role || !bio || !triggers.length) return;
+  if (!dialog || !close || !image || !imageFrame || !name || !role || !bio || !contactLinks || !triggers.length) return;
 
+  // Only information actually supplied/approved is stored here. Missing fields are deliberately not invented.
   const profiles = {
     "olusola-adekanola": {
       name: "Olusola Adekanola (FCA, FNIT)",
       role: "Global Chairman",
       image: "/images/Otuba-Olusola-Adekanola.jpg",
       alt: "Olusola Adekanola, Global Chairman",
-      bio: "The ARGP, pioneered by OA & Co., was an innovation; a revolution that transformed revenue generation strategy of governments at the state level and radically boosted their revenue earnings from taxes, levies, fees and penalties in doubles, triples and even quadruples."
+      bio: [
+        "The ARGP, pioneered by OA & Co., was an innovation; a revolution that transformed revenue generation strategy of governments at the state level and radically boosted their revenue earnings from taxes, levies, fees and penalties in doubles, triples and even quadruples."
+      ],
+      contacts: []
     },
     "julius-olugbade": {
       name: "Dr. Julius Olugbade (PhD.)",
       role: "Managing Partner/CEO",
       image: "/images/Dr-Julius-Olugbde.jpg",
       alt: "Dr. Julius Olugbade, Managing Partner/CEO",
-      bio: "Biography will be added when the approved profile details are provided."
+      bio: ["Biography will be added when the approved profile details are provided."],
+      contacts: []
     },
     "kehinde-oyeleke": {
       name: "Kehinde Oyeleke",
       role: "Managing Partner",
       image: "/images/Kehinde-Oyeleke.jpg",
       alt: "Kehinde Oyeleke, Managing Partner",
-      bio: "Biography will be added when the approved profile details are provided."
+      bio: ["Biography will be added when the approved profile details are provided."],
+      contacts: []
     }
   };
 
   let lastTrigger = null;
   let previousOverflow = "";
+  let imageRequest = 0;
 
-  const setImage = (profile) => {
+  function icon(type) {
+    if (type === "linkedin") return '<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5.2 8.5H2V22h3.2V8.5zM3.6 2A1.9 1.9 0 1 0 3.6 5.8 1.9 1.9 0 0 0 3.6 2zM9 8.5H6V22h3.2v-7.1c0-1.9.36-3.8 2.76-3.8 2.37 0 2.4 2.25 2.4 3.92V22H18v-7.75c0-3.8-.82-6.72-5.28-6.72-2.14 0-3.57 1.18-4.16 2.3h-.04V8.5z"></path></svg>';
+    return '<svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m5 7 7 5 7-5"></path></svg>';
+  }
+
+  function renderContacts(profile) {
+    contactLinks.replaceChildren();
+    if (profile.contacts && profile.contacts.length) {
+      profile.contacts.forEach((item) => {
+        const a = document.createElement("a");
+        a.className = "leadership-profile-modal__contact-link";
+        a.href = item.href;
+        a.target = item.external ? "_blank" : "_self";
+        a.rel = item.external ? "noopener noreferrer" : "";
+        a.setAttribute("aria-label", item.label);
+        a.innerHTML = `${icon(item.type)}<span>${item.label}</span>`;
+        contactLinks.appendChild(a);
+      });
+    } else {
+      const pending = document.createElement("span");
+      pending.className = "leadership-profile-modal__contact-pending";
+      pending.textContent = "Profile contact details will be added with the approved profile.";
+      contactLinks.appendChild(pending);
+    }
+  }
+
+  function render(profile) {
+    name.textContent = profile.name;
+    role.textContent = profile.role;
+    bio.replaceChildren();
+    profile.bio.forEach((paragraph) => {
+      const p = document.createElement("p");
+      p.textContent = paragraph;
+      bio.appendChild(p);
+    });
+    renderContacts(profile);
+    if (additional) {
+      additional.replaceChildren();
+      additional.hidden = true;
+    }
+
+    const requestId = ++imageRequest;
     imageFrame.classList.remove("is-empty");
-    image.src = profile.image;
     image.alt = profile.alt;
-  };
+    image.removeAttribute("src");
+    requestAnimationFrame(() => {
+      if (requestId === imageRequest) image.src = profile.image;
+    });
+  }
 
   image.addEventListener("error", () => {
+    if (!image.getAttribute("src")) return;
     imageFrame.classList.add("is-empty");
     image.removeAttribute("src");
   });
 
-  const open = (trigger) => {
+  function open(trigger) {
     const profile = profiles[trigger.dataset.profileId];
     if (!profile) return;
     lastTrigger = trigger;
-    name.textContent = profile.name;
-    role.textContent = profile.role;
-    bio.textContent = profile.bio;
-    setImage(profile);
-    if (contact) contact.hidden = true;
-    if (contactLinks) contactLinks.replaceChildren();
-
+    render(profile);
     modal.classList.add("is-open");
     modal.setAttribute("aria-hidden", "false");
     previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
+    dialog.scrollTop = 0;
     close.focus();
-  };
+  }
 
-  const shut = () => {
+  function shut() {
     modal.classList.remove("is-open");
     modal.setAttribute("aria-hidden", "true");
     document.body.style.overflow = previousOverflow;
     if (lastTrigger) lastTrigger.focus();
-  };
+  }
 
-  triggers.forEach(trigger => trigger.addEventListener("click", () => open(trigger)));
+  triggers.forEach((trigger) => trigger.addEventListener("click", () => open(trigger)));
   close.addEventListener("click", shut);
-  modal.addEventListener("click", event => {
+  modal.addEventListener("click", (event) => {
     if (event.target === modal) shut();
   });
 
-  document.addEventListener("keydown", event => {
+  document.addEventListener("keydown", (event) => {
     if (!modal.classList.contains("is-open")) return;
     if (event.key === "Escape") {
       event.preventDefault();
@@ -92,7 +139,8 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
     if (event.key !== "Tab") return;
-    const focusable = [...modal.querySelectorAll("button, a[href], input, select, textarea, [tabindex]:not([tabindex='-1'])")].filter(el => !el.hidden && el.offsetParent !== null);
+    const focusable = [...modal.querySelectorAll("button, a[href], input, select, textarea, [tabindex]:not([tabindex='-1'])")]
+      .filter((el) => !el.hidden && el.offsetParent !== null);
     if (!focusable.length) return;
     const first = focusable[0];
     const last = focusable[focusable.length - 1];
