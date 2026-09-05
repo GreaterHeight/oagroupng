@@ -1705,3 +1705,18 @@ body.nav-open{overflow:hidden}@media(min-width:821px){body.nav-open{overflow:aut
   .leadership-profile-modal{padding:10px;}
   .leadership-profile-modal__dialog{width:calc(100vw - 20px);height:calc(100vh - 20px);max-height:calc(100vh - 20px);}
 }
+
+/* v4.31 — leadership cards breathe on mobile. */
+@media (max-width: 600px){
+  .leadership-grid{
+    grid-template-columns: minmax(0, 1fr);
+    gap: 52px;
+    padding-inline: 10px;
+  }
+  .leader-card{
+    width: min(100%, 430px);
+    margin-inline: auto;
+  }
+  .leader-card__image{width:100%;}
+  .leader-card__body{padding:20px 8px 4px;}
+}

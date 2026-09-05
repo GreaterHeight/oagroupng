@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
       role: "Managing Partner",
       image: "/images/Kehinde-Oyeleke.jpg",
       alt: "Kehinde Oyeleke, Managing Partner",
-      bio: ["Biography will be added when the approved profile details are provided."],
+      bio: ["Kehinde Oyeleke began his career in Corporate Finance at Arthur Andersen, later specialising in Corporate Tax and Business Advisory before joining the Transaction Structuring Group of PricewaterhouseCoopers in New York. He subsequently served as Vice President/Principal at Capital Alliance and Executive Director for Corporate Finance/Financial Advisory Services at Asset & Resource Management Company Limited. In 2002, he founded Seedvest Group to advance financial inclusion for economically active micro-entrepreneurs in Nigeria. Kehinde is a New York-licensed Certified Public Accountant and Fellow of the Institute of Chartered Accountants of Nigeria. He holds a BSc from Obafemi Awolowo University and an MBA in Finance and Strategic Management from Wharton, and has completed management training at Harvard and Stanford."],
       contacts: [
         {type:"linkedin", href:"https://www.linkedin.com/in/ken-oyeleke-3736351a/", external:true},
         {type:"email", href:"mailto:info@oagroupng.com", external:false},
