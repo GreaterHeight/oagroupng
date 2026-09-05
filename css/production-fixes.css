@@ -1706,17 +1706,52 @@ body.nav-open{overflow:hidden}@media(min-width:821px){body.nav-open{overflow:aut
   .leadership-profile-modal__dialog{width:calc(100vw - 20px);height:calc(100vh - 20px);max-height:calc(100vh - 20px);}
 }
 
-/* v4.31 — leadership cards breathe on mobile. */
-@media (max-width: 600px){
-  .leadership-grid{
-    grid-template-columns: minmax(0, 1fr);
-    gap: 52px;
-    padding-inline: 10px;
-  }
-  .leader-card{
-    width: min(100%, 430px);
-    margin-inline: auto;
-  }
-  .leader-card__image{width:100%;}
-  .leader-card__body{padding:20px 8px 4px;}
+
+/* Leadership philosophy — expanded institutional statement */
+.leadership-philosophy__grid{
+  display:grid;
+  grid-template-columns:minmax(240px,.72fr) minmax(0,1.28fr);
+  gap:clamp(32px,6vw,88px);
+  align-items:start;
+}
+.leadership-philosophy__lead p{
+  margin:0;
+  font-family:var(--font-display, "Cormorant Garamond", serif);
+  font-size:clamp(1.65rem,3vw,2.55rem);
+  line-height:1.18;
+  letter-spacing:-.015em;
+}
+.leadership-philosophy__body{
+  max-width:760px;
+}
+.leadership-philosophy__body p{
+  margin:0 0 1.15rem;
+}
+.leadership-philosophy__body p:last-child{
+  margin-bottom:0;
+}
+.leadership-philosophy__principle{
+  margin-top:clamp(40px,6vw,72px);
+  padding:clamp(24px,4vw,40px) 0 0;
+  border-top:1px solid rgba(92,108,148,.28);
+}
+.leadership-philosophy__principle span{
+  display:block;
+  margin-bottom:12px;
+  font-family:var(--font-ui, "Cinzel", serif);
+  font-size:.72rem;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+.leadership-philosophy__principle p{
+  margin:0;
+  max-width:900px;
+  font-family:var(--font-display, "Cormorant Garamond", serif);
+  font-size:clamp(2rem,4vw,3.35rem);
+  line-height:1.08;
+  letter-spacing:-.02em;
+}
+@media (max-width:800px){
+  .leadership-philosophy__grid{grid-template-columns:1fr;gap:28px;}
+  .leadership-philosophy__lead p{font-size:clamp(1.7rem,7vw,2.25rem);}
 }
