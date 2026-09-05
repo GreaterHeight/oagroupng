@@ -1815,3 +1815,45 @@ body.nav-open{overflow:hidden}@media(min-width:821px){body.nav-open{overflow:aut
     padding-bottom:24px!important;
   }
 }
+
+/* v4.37 — Production form feedback */
+.form-status[data-status-type="success"] { border-color: currentColor; }
+.form-status[data-status-type="error"] { border-color: currentColor; }
+.form-status[data-status-type="loading"] { opacity: .8; }
+.form-status.newsletter-status { margin-top: 12px; }
+button[aria-busy="true"] { cursor: wait; }
+
+
+/* v4.38 — Leadership team expansion and row arrangement.
+   Row 1: Chairman alone. Rows 2–3: three leaders per row. */
+.leadership-principals .leadership-grid{
+  grid-template-columns:repeat(6,minmax(0,1fr));
+  column-gap:22px;
+  row-gap:54px;
+}
+.leadership-principals .leadership-grid .leader-card:first-child{
+  grid-column:3 / span 2;
+}
+.leader-card__role{
+  font-weight:700;
+}
+@media (max-width:1050px){
+  .leadership-principals .leadership-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+  .leadership-principals .leadership-grid .leader-card:first-child{
+    grid-column:1 / -1;
+    width:min(100%,430px);
+    margin-inline:auto;
+  }
+}
+@media (max-width:600px){
+  .leadership-principals .leadership-grid{
+    grid-template-columns:minmax(0,1fr)!important;
+    row-gap:56px!important;
+  }
+  .leadership-principals .leadership-grid .leader-card:first-child{
+    grid-column:auto;
+    width:min(100%,430px)!important;
+  }
+}

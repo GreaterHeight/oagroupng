@@ -162,14 +162,6 @@ document.addEventListener("DOMContentLoaded",()=>{
     if(action==="rejected"){if(nonEssential)nonEssential.checked=false;closeCookie("rejected");return}
     if(action==="save"){closeCookie(nonEssential?.checked?"accepted":"rejected")}
   }));
-  document.querySelectorAll(".newsletter").forEach(form=>form.addEventListener("submit",e=>{
-    e.preventDefault();
-    const input=form.querySelector('input[type="email"]'); const consent=form.querySelector('input[name="newsletter-consent"]');
-    if(!input?.checkValidity()||!consent?.checked){form.reportValidity();return}
-    const subject=encodeURIComponent("OA Group Newsletter Subscription");
-    const body=encodeURIComponent("Please add this email to the OA Group Nigeria newsletter: "+input.value.trim());
-    window.location.href=`mailto:info@oagroupng.com?subject=${subject}&body=${body}`;
-  }));
 });
 
 
