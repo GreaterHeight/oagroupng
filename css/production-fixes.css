@@ -1755,3 +1755,45 @@ body.nav-open{overflow:hidden}@media(min-width:821px){body.nav-open{overflow:aut
   .leadership-philosophy__grid{grid-template-columns:1fr;gap:28px;}
   .leadership-philosophy__lead p{font-size:clamp(1.7rem,7vw,2.25rem);}
 }
+
+
+/* v4.33 — Restore generous mobile leadership-card layout.
+   Desktop three-column layout is intentionally untouched. */
+@media (max-width: 600px){
+  .leadership-principals .leadership-grid{
+    display:grid;
+    grid-template-columns:minmax(0,1fr)!important;
+    gap:56px!important;
+    width:100%;
+    margin-inline:0;
+    padding-inline:12px;
+    box-sizing:border-box;
+  }
+  .leadership-principals .leadership-grid .leader-card{
+    width:min(100%,430px)!important;
+    max-width:430px!important;
+    min-width:0!important;
+    margin-inline:auto!important;
+    box-sizing:border-box;
+  }
+  .leadership-principals .leadership-grid .leader-card__image{
+    width:100%;
+    aspect-ratio:4 / 5;
+  }
+  .leadership-principals .leadership-grid .leader-card__body{
+    padding:20px 4px 4px!important;
+  }
+  .leadership-principals .leadership-grid .leader-card__body p{
+    max-width:390px;
+    margin-inline:auto;
+  }
+}
+@media (max-width:380px){
+  .leadership-principals .leadership-grid{
+    gap:50px!important;
+    padding-inline:10px;
+  }
+  .leadership-principals .leadership-grid .leader-card__body h3{
+    font-size:26px;
+  }
+}
