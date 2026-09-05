@@ -500,3 +500,55 @@ Every image prompt in this document now includes an explicit master dimension.
 **Technical target:** 16:9 master, minimum 3840×2160 pixels, JPG, sRGB, horizontal composition, mobile-safe crop.
 
 **Negative prompt:** money piles, currency close-ups, generic stock photo, handshake cliché, readable figures, fake dashboards, logos, distorted anatomy, duplicated people, plastic skin, neon, cartoon, illustration, CGI.
+
+
+## v4.34 — Code of Conduct & Core Purpose. Values. Mission.
+
+### `/code-of-conduct/` — Page Hero
+**Filename:** `code-of-conduct-hero.jpg`  
+**Dimensions:** 2400 × 1350 px  
+**Aspect ratio:** 16:9
+
+**Prompt:** Premium photorealistic corporate editorial photograph for OA Group Nigeria's Code of Conduct page. Show an African-led executive team in a sophisticated modern boardroom engaged in a serious governance discussion. Communicate integrity, accountability, ethical leadership, trust, responsibility and sound judgement. Contemporary Lagos business environment, refined architecture, natural window light, authentic African professionals, restrained executive styling, realistic skin tones, cinematic depth, generous negative space suitable for page-hero typography. No visible logos, no text, no watermark, no exaggerated luxury. High-end annual-report photography.
+
+### `/code-of-conduct/` — Integrity Image
+**Filename:** `code-of-conduct-integrity.jpg`  
+**Dimensions:** 1600 × 1000 px  
+**Aspect ratio:** 16:10
+
+**Prompt:** Premium photorealistic corporate editorial photograph showing two African business executives carefully reviewing an important document together in a professional office. Their expressions and body language communicate careful judgement, transparency, responsibility and mutual trust. Sophisticated Nigerian corporate environment, natural daylight, authentic interaction, understated executive clothing, refined composition and realistic details. No logos, no text, no watermark.
+
+### `/code-of-conduct/` — Culture Image
+**Filename:** `code-of-conduct-culture.jpg`  
+**Dimensions:** 1600 × 1000 px  
+**Aspect ratio:** 16:10
+
+**Prompt:** Premium photorealistic African corporate team scene showing diverse professionals collaborating around a table in a modern boardroom. Communicate ethical culture, inclusion, professional respect, accountability and collective responsibility. Natural interaction rather than posed stock photography, sophisticated Nigerian business setting, restrained blue-grey and neutral atmosphere, realistic skin tones, cinematic but believable lighting, high-end corporate editorial photography. No logos, no text, no watermark.
+
+### `/purpose-values-mission/` — Page Hero
+**Filename:** `purpose-values-mission-hero.jpg`  
+**Dimensions:** 2400 × 1350 px  
+**Aspect ratio:** 16:9
+
+**Prompt:** Premium photorealistic corporate editorial photograph representing organisational purpose, values and mission. Show an African executive leadership team looking through a large glass window over a modern African city, suggesting direction, responsibility, ambition and long-term value creation. Elegant contemporary architecture, refined Nigerian corporate environment, natural golden daylight, sophisticated restrained styling, cinematic depth, generous negative space for page-hero typography. No visible logos, no text, no watermark.
+
+### `/purpose-values-mission/` — Purpose & Values Image
+**Filename:** `purpose-values.jpg`  
+**Dimensions:** 1600 × 1000 px  
+**Aspect ratio:** 16:10
+
+**Prompt:** Premium photorealistic corporate editorial image representing organisational purpose and strategic direction. Show senior African executives in thoughtful discussion around a strategy table, focused on a clear long-term objective. Modern Nigerian business environment, natural light, authentic expressions, sophisticated corporate styling, realistic skin tones, understated visual language and high-end annual-report photography. No logos, no text, no watermark.
+
+### `/purpose-values-mission/` — Mission / Execution Image
+**Filename:** `mission-execution.jpg`  
+**Dimensions:** 1600 × 1000 px  
+**Aspect ratio:** 16:10
+
+**Prompt:** Premium photorealistic corporate editorial photograph showing an African leadership team moving from strategy into execution. Professionals collaborate around a digital planning display in a modern office, with purposeful body language and a sense of disciplined progress. Communicate action, execution, collaboration and measurable value creation. Authentic Nigerian corporate setting, natural daylight, refined neutral and blue-grey atmosphere, cinematic realism. No logos, no text, no watermark.
+
+### `/purpose-values-mission/` — Purpose / Values / Mission Alignment Image
+**Filename:** `purpose-alignment.jpg`  
+**Dimensions:** 1600 × 1000 px  
+**Aspect ratio:** 16:10
+
+**Prompt:** Premium photorealistic African corporate editorial photograph representing alignment between purpose, values and mission. Show three senior professionals in thoughtful strategic conversation, communicating shared direction and alignment without literal symbols or diagrams. Modern Lagos corporate environment, sophisticated architecture, authentic professional interaction, natural light, restrained executive styling, realistic skin tones and elegant composition. No logos, no text, no watermark.
