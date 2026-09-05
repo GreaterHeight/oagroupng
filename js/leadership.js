@@ -51,28 +51,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function icon(type) {
     if (type === "linkedin") return '<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5.2 8.5H2V22h3.2V8.5zM3.6 2A1.9 1.9 0 1 0 3.6 5.8 1.9 1.9 0 0 0 3.6 2zM9 8.5H6V22h3.2v-7.1c0-1.9.36-3.8 2.76-3.8 2.37 0 2.4 2.25 2.4 3.92V22H18v-7.75c0-3.8-.82-6.72-5.28-6.72-2.14 0-3.57 1.18-4.16 2.3h-.04V8.5z"></path></svg>';
-    return '<svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m5 7 7 5 7-5"></path></svg>';
+    if (type === "email") return '<svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m5 7 7 5 7-5"></path></svg>';
+    return '<svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3.5 12h17M12 3c2.4 2.55 3.6 5.55 3.6 9S14.4 18.45 12 21c-2.4-2.55-3.6-5.55-3.6-9S9.6 5.55 12 3z"></path></svg>';
   }
 
   function renderContacts(profile) {
     contactLinks.replaceChildren();
-    if (profile.contacts && profile.contacts.length) {
-      profile.contacts.forEach((item) => {
+    const types = [
+      {type:"linkedin", label:"LinkedIn"},
+      {type:"email", label:"Email"},
+      {type:"website", label:"Website"}
+    ];
+    const contacts = Array.isArray(profile.contacts) ? profile.contacts : [];
+    types.forEach((base) => {
+      const item = contacts.find((entry) => entry.type === base.type);
+      if (item && item.href) {
         const a = document.createElement("a");
         a.className = "leadership-profile-modal__contact-link";
         a.href = item.href;
         a.target = item.external ? "_blank" : "_self";
-        a.rel = item.external ? "noopener noreferrer" : "";
-        a.setAttribute("aria-label", item.label);
-        a.innerHTML = `${icon(item.type)}<span>${item.label}</span>`;
+        if (item.external) a.rel = "noopener noreferrer";
+        a.setAttribute("aria-label", base.label + " — " + profile.name);
+        a.title = base.label;
+        a.innerHTML = icon(base.type);
         contactLinks.appendChild(a);
-      });
-    } else {
-      const pending = document.createElement("span");
-      pending.className = "leadership-profile-modal__contact-pending";
-      pending.textContent = "Profile contact details will be added with the approved profile.";
-      contactLinks.appendChild(pending);
-    }
+      } else {
+        const button = document.createElement("span");
+        button.className = "leadership-profile-modal__contact-link is-pending";
+        button.setAttribute("aria-label", base.label + " details pending");
+        button.title = base.label + " details to be supplied";
+        button.setAttribute("aria-disabled", "true");
+        button.innerHTML = icon(base.type);
+        contactLinks.appendChild(button);
+      }
+    });
   }
 
   function render(profile) {

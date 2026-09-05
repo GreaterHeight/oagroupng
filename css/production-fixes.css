@@ -1648,3 +1648,60 @@ body.nav-open{overflow:hidden}@media(min-width:821px){body.nav-open{overflow:aut
   .leadership-profile-modal__content h2 { font-size:42px; }
   .leadership-profile-modal__close { top:10px; right:10px; }
 }
+
+
+/* v4.28 — leadership hero, profile modal proportions, contact icons, footer utilities */
+.page-hero--leadership .page-hero__media{
+  position:absolute!important; inset:0!important; z-index:0; width:100%!important; height:100%!important;
+}
+.page-hero--leadership .page-hero__media > img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 28%;}
+.page-hero--leadership .page-hero__media::after{
+  content:""; position:absolute; inset:0; z-index:2; pointer-events:none;
+  background:linear-gradient(90deg,rgba(7,17,38,.90) 0%,rgba(7,17,38,.68) 42%,rgba(7,17,38,.30) 72%,rgba(7,17,38,.10) 100%);
+}
+.page-hero--leadership .page-hero__media.is-empty::after{display:none!important}
+
+/* The profile should be substantial, but not a viewport-height takeover. */
+.leadership-profile-modal{padding:36px 42px;}
+.leadership-profile-modal__dialog{
+  width:min(1080px,calc(100vw - 84px));
+  height:min(740px,calc(100vh - 72px));
+  max-height:calc(100vh - 72px);
+  grid-template-columns:285px minmax(0,1fr);
+}
+.leadership-profile-modal__aside{padding:28px 22px 26px;}
+.leadership-profile-modal__portrait{aspect-ratio:4/5;}
+.leadership-profile-modal__content{padding:34px 54px 46px;}
+.leadership-profile-modal__content h2{font-size:clamp(44px,4.2vw,60px);}
+.leadership-profile-modal__contact-links{display:flex;gap:10px;align-items:center;flex-wrap:wrap;}
+.leadership-profile-modal__contact-link{
+  width:42px;height:42px;min-height:42px;padding:0;display:inline-flex;align-items:center;justify-content:center;
+  border:1px solid #222;background:#fff;color:#111;text-decoration:none;
+  transition:background .18s ease,color .18s ease,border-color .18s ease,transform .18s ease;
+}
+.leadership-profile-modal__contact-link svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.8;}
+.leadership-profile-modal__contact-link svg path:first-child{fill:currentColor;stroke:none;}
+.leadership-profile-modal__contact-link:hover:not(.is-pending){background:#111;color:#fff;transform:translateY(-1px);}
+.leadership-profile-modal__contact-link.is-pending{opacity:.42;cursor:not-allowed;}
+
+/* Footer logo is transparent already; remove the white CSS plate that made it look pasted. */
+.footer-brand img{background:transparent!important;padding:0!important;}
+.footer-brand h2{margin-top:24px!important;}
+.footer-brand p{margin-top:12px;}
+.footer-bottom a[href="https://greaterheight.tech"]{color:var(--oa-secondary-200);text-decoration:underline;text-underline-offset:3px;}
+
+/* Keep the persistent utilities visually separate: WhatsApp above Back to Top. */
+.backtop{right:24px;bottom:24px;z-index:1300;}
+.oa-whatsapp-chat{right:24px;bottom:92px;z-index:1290;}
+@media(max-width:767px){
+  .backtop{right:16px;bottom:16px;}
+  .oa-whatsapp-chat{right:16px;bottom:82px;}
+}
+@media(max-width:900px){
+  .leadership-profile-modal{padding:20px;}
+  .leadership-profile-modal__dialog{width:min(760px,calc(100vw - 40px));height:min(860px,calc(100vh - 40px));max-height:calc(100vh - 40px);}
+}
+@media(max-width:560px){
+  .leadership-profile-modal{padding:10px;}
+  .leadership-profile-modal__dialog{width:calc(100vw - 20px);height:calc(100vh - 20px);max-height:calc(100vh - 20px);}
+}
