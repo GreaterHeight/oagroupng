@@ -1857,3 +1857,57 @@ button[aria-busy="true"] { cursor: wait; }
     width:min(100%,430px)!important;
   }
 }
+
+/* v4.39 — Leadership desktop grid correction.
+   Required composition:
+   Row 1: Otunba Olusola Adekanola alone, centred.
+   Row 2: Julius, Kehinde, Bamidele.
+   Row 3: Success, John, Udon.
+   The previous six-column treatment made the first row contain three cards
+   and reduced the remaining cards to an unnecessarily small size. */
+.leadership-principals .leadership-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  column-gap:32px;
+  row-gap:72px;
+  align-items:start;
+}
+.leadership-principals .leadership-grid .leader-card:first-child{
+  grid-column:1 / -1;
+  width:min(100%,430px);
+  justify-self:center;
+}
+.leadership-principals .leadership-grid .leader-card{
+  width:100%;
+  min-width:0;
+}
+.leadership-principals .leadership-grid .leader-card__image{
+  width:100%;
+  aspect-ratio:4 / 5;
+}
+.leader-card__role{
+  font-weight:700!important;
+}
+
+@media (max-width:900px){
+  .leadership-principals .leadership-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    column-gap:28px;
+    row-gap:60px;
+  }
+  .leadership-principals .leadership-grid .leader-card:first-child{
+    grid-column:1 / -1;
+  }
+}
+
+@media (max-width:600px){
+  .leadership-principals .leadership-grid{
+    grid-template-columns:minmax(0,1fr)!important;
+    column-gap:0;
+    row-gap:56px!important;
+  }
+  .leadership-principals .leadership-grid .leader-card:first-child{
+    grid-column:auto;
+    width:min(100%,430px)!important;
+  }
+}
