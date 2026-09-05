@@ -25,15 +25,23 @@ document.addEventListener("DOMContentLoaded", () => {
       bio: [
         "The ARGP, pioneered by OA & Co., was an innovation; a revolution that transformed revenue generation strategy of governments at the state level and radically boosted their revenue earnings from taxes, levies, fees and penalties in doubles, triples and even quadruples."
       ],
-      contacts: []
+      contacts: [
+        {type:"linkedin", href:"https://www.linkedin.com/in/juliusolugbade/", external:true},
+        {type:"email", href:"mailto:Olusola.Adekanola@oagroupng.com", external:false},
+        {type:"website", href:"https://www.oagroung.com", external:true}
+      ]
     },
     "julius-olugbade": {
       name: "Dr. Julius Olugbade (PhD.)",
       role: "Managing Partner/CEO",
       image: "/images/Dr-Julius-Olugbde.jpg",
       alt: "Dr. Julius Olugbade, Managing Partner/CEO",
-      bio: ["Biography will be added when the approved profile details are provided."],
-      contacts: []
+      bio: ["Dr. Julius Ade Olugbade is a multidisciplinary accounting, audit, finance, tax, risk and compliance professional with over 20 years of professional and academic experience. He has held senior and managerial roles across banking, real estate, technology, aviation, pharmaceuticals and finance, including Chief Financial Officer, Group Head of Audit, Internal Control and Compliance, Manager of Finance and Domestic Operations, and Manager of Internal Audit, Risk and Compliance.", "His expertise includes internal control, auditing and investigation, fraud detection, financial reporting, financial analysis, forecasting, treasury and investment management, risk assessment, compliance and management reporting. He has also lectured accounting at Afe Babalola University and other institutions, supervised research, and advised organisations. He holds a PhD, MPhil and MSc in Accounting, an MBA in Finance and Banking, and a BSc in Accounting."],
+      contacts: [
+        {type:"linkedin", href:"https://www.linkedin.com/in/juliusolugbade/", external:true},
+        {type:"email", href:"mailto:julius.olugbade@oagroupng.com", external:false},
+        {type:"website", href:"https://www.juliusolugbade.com", external:true}
+      ]
     },
     "kehinde-oyeleke": {
       name: "Kehinde Oyeleke",
@@ -41,7 +49,11 @@ document.addEventListener("DOMContentLoaded", () => {
       image: "/images/Kehinde-Oyeleke.jpg",
       alt: "Kehinde Oyeleke, Managing Partner",
       bio: ["Biography will be added when the approved profile details are provided."],
-      contacts: []
+      contacts: [
+        {type:"linkedin", href:"https://www.linkedin.com/in/ken-oyeleke-3736351a/", external:true},
+        {type:"email", href:"mailto:info@oagroupng.com", external:false},
+        {type:"website", href:"https://www.oagroung.com", external:true}
+      ]
     }
   };
 
