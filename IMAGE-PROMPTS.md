@@ -102,6 +102,17 @@ Subtly use OA Group's approved palette: `#5C6C94`, `#AAB4C8`, `#4A4A4A`, `#FFFFF
 
 **Negative prompt:** generic stock photography, posed corporate team, handshake cliché, people staring at camera, fake dashboards, readable invented text, logos, watermarks, excessive blue glow, cyberpunk, neon, distorted anatomy, plastic skin, duplicated people, clutter, unrealistic Lagos skyline, fabricated landmarks, cartoon, illustration, CGI appearance
 
+# 5. PRODUCTS
+
+### `/images/products-hero.jpg` (16:9 master — minimum 3840×2160)
+**Placement:** Products page full-bleed hero background.
+
+**Generation prompt:** Create a premium full-bleed editorial photograph representing the specialist products and structured offerings of a diversified Nigerian business group. Show a sophisticated contemporary Lagos professional environment with subtle, realistic visual cues of professional services, consulting, finance, real estate, investment and commercial project delivery integrated into one coherent scene rather than a collage. Use refined work materials such as a laptop, reports, architectural plans, financial documents and project information, with two or three Nigerian professionals naturally engaged in serious work. Communicate practical solutions, capability, value creation and disciplined execution. Keep the left third visually calm and text-safe for the page heading; place the strongest people, workspace and product-related visual interest toward the right and lower-right. Photorealistic, premium annual-report/editorial photography, natural daylight, restrained OA Group blue-grey palette. No visible brand logos or readable text anywhere in the image.
+
+**Technical target:** 16:9, minimum 3840×2160 pixels, JPG, sRGB, full-bleed responsive website hero, designed to crop gracefully on mobile. Maintain a text-safe left third and weight visual interest toward the right/lower-right.
+
+**Negative prompt:** generic stock photography, posed corporate team, handshake cliché, people staring at camera, product catalogue collage, floating icons, fake dashboards, readable invented text, logos, watermarks, excessive blue glow, cyberpunk, neon, distorted anatomy, plastic skin, duplicated people, clutter, unrealistic Lagos skyline, fabricated landmarks, cartoon, illustration, CGI appearance, exaggerated luxury
+
 # 5. OUR COMPANIES
 
 ### `/images/our-companies-portfolio.jpg` (16:9 master — minimum 3840×2160)

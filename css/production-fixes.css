@@ -1797,3 +1797,21 @@ body.nav-open{overflow:hidden}@media(min-width:821px){body.nav-open{overflow:aut
     font-size:26px;
   }
 }
+
+/* v4.35 — Contact page: compact Office block. */
+.office-location{
+  padding-top:42px!important;
+  padding-bottom:30px!important;
+}
+.office-location .section-heading{
+  margin-bottom:0!important;
+}
+.office-location .section-heading > div{
+  margin-bottom:0!important;
+}
+@media (max-width:700px){
+  .office-location{
+    padding-top:32px!important;
+    padding-bottom:24px!important;
+  }
+}
