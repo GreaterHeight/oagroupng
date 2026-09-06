@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Only information actually supplied/approved is stored here. Missing fields are deliberately not invented.
   const profiles = {
     "olusola-adekanola": {
-      name: "Olusola Adekanola (FCA, FNIT)",
+      name: "Otunba Olusola Adekanola (FCA, FNIT)",
       role: "Global Chairman",
       image: "/images/Otuba-Olusola-Adekanola.jpg",
       alt: "Olusola Adekanola, Global Chairman",
