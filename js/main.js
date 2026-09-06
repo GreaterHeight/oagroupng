@@ -1,4 +1,16 @@
 
+/* v4.40 — load web fonts without blocking first paint. */
+(() => {
+  "use strict";
+  const href = "https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Crimson+Pro:wght@300;400;500;600&display=swap";
+  if (document.querySelector(`link[data-oa-fonts]`)) return;
+  const link = document.createElement("link");
+  link.rel = "stylesheet";
+  link.href = href;
+  link.dataset.oaFonts = "true";
+  document.head.appendChild(link);
+})();
+
 /* v4.4 — OA Group logo loading spinner / throbber */
 (() => {
   "use strict";
@@ -9,15 +21,17 @@
     window.setTimeout(() => loader.remove(), 420);
   };
 
-  if (document.readyState === "complete") {
-    window.requestAnimationFrame(hideLoader);
+  // Do not make the first paint wait for fonts, images, or the hero video.
+  // The loader is only an initial paint guard, not a full-resource gate.
+  const revealWhenReady = () => window.requestAnimationFrame(() => window.requestAnimationFrame(hideLoader));
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", revealWhenReady, { once: true });
   } else {
-    window.addEventListener("load", hideLoader, { once: true });
+    revealWhenReady();
   }
 
-  // Safety valve: never trap a visitor behind the loader because one resource
-  // is slow or fails. This is intentionally generous for mobile connections.
-  window.setTimeout(hideLoader, 8000);
+  // Safety valve: never trap a visitor behind the loader.
+  window.setTimeout(hideLoader, 1800);
 })();
 
 /* v4.2 — CSP-safe placeholder-first image fallback */

@@ -23,7 +23,14 @@ document.addEventListener('DOMContentLoaded',()=>{
     probe.onerror = () => heroSection.classList.add('hero--poster-missing');
     probe.src = poster;
   }
-  if(reduced.matches)video.pause();
+  if(reduced.matches){
+    video.pause();
+  }else{
+    // Let the poster and page shell paint before starting the video request.
+    const startVideo = () => video.play().catch(()=>{});
+    if ("requestIdleCallback" in window) window.requestIdleCallback(startVideo, {timeout:1200});
+    else window.setTimeout(startVideo, 350);
+  }
   toggle.addEventListener('click',()=>{
     if(video.paused){
       video.play().catch(()=>{});

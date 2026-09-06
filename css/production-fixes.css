@@ -1911,3 +1911,12 @@ button[aria-busy="true"] { cursor: wait; }
     width:min(100%,430px)!important;
   }
 }
+
+
+/* v4.40 — performance: below-the-fold sections can be skipped until near view. */
+@media (min-width: 701px){
+  main > section:not(.hero):not(.page-hero){
+    content-visibility:auto;
+    contain-intrinsic-size:1px 700px;
+  }
+}
