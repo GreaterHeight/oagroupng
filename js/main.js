@@ -98,6 +98,7 @@
       frame.classList.add("is-placeholder-pending");
       const hero = frame.closest(".page-hero");
       if (hero) hero.classList.add("has-placeholder-image");
+      else frame.classList.remove("is-placeholder-pending");
 
       if (img.dataset.placeholderListeners === "true") return;
       img.dataset.placeholderListeners = "true";
