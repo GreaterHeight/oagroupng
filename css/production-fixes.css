@@ -1920,3 +1920,12 @@ button[aria-busy="true"] { cursor: wait; }
     contain-intrinsic-size:1px 700px;
   }
 }
+
+/* v4.42 — Leadership portraits: keep visible team imagery rendered. */
+.leadership-principals{
+  content-visibility:visible!important;
+  contain-intrinsic-size:auto!important;
+}
+.leadership-principals .leader-card__image img{
+  display:block!important;
+}
