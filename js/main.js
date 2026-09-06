@@ -34,7 +34,11 @@
   window.setTimeout(hideLoader, 1800);
 })();
 
-/* v4.2 — CSP-safe placeholder-first image fallback */
+/* v4.43 — image fallback only: real images render immediately.
+   Governing rule:
+   - If the declared image exists, show the real image; never show a placeholder first.
+   - Only a genuine load failure gets the .is-empty placeholder state.
+   - No "pending" state is used and no valid image is hidden while loading. */
 (() => {
   "use strict";
 
@@ -47,9 +51,12 @@
   const markImageUnavailable = (img) => {
     if (!isSiteImage(img) || img.dataset.imageFallbackApplied === "true") return;
 
-    // Header and loader logos are supplied brand assets, not content-image
-    // frames. Never remove them through the generic placeholder mechanism.
-    if (img.dataset.brandAsset === "true" || img.closest(".brand") || img.classList.contains("site-loader__logo")) return;
+    // Brand assets are never converted into content placeholders.
+    if (
+      img.dataset.brandAsset === "true" ||
+      img.closest(".brand") ||
+      img.classList.contains("site-loader__logo")
+    ) return;
 
     img.dataset.imageFallbackApplied = "true";
 
@@ -58,6 +65,7 @@
 
     if (frame) {
       frame.classList.add("is-empty");
+      frame.classList.remove("is-placeholder-pending");
       const hero = frame.closest(".page-hero");
       if (hero) hero.classList.add("has-placeholder-image");
       img.remove();
@@ -70,79 +78,38 @@
       return;
     }
 
-    // Supplied brand assets and any future non-framed image should fail
-    // silently rather than leaving a browser broken-image icon.
+    // Non-framed content images fail silently rather than showing a broken icon.
     img.remove();
   };
 
-  // Capture the native error event so this also handles lazy-loaded images.
+  // Capture native failures, including lazy-loaded images.
   document.addEventListener("error", (event) => {
-    if (event.target instanceof HTMLImageElement) markImageUnavailable(event.target);
+    if (event.target instanceof HTMLImageElement) {
+      markImageUnavailable(event.target);
+    }
   }, true);
 
-  // Deferred scripts can execute after an eager image has already failed.
-  // Scan completed images once DOM parsing is complete to catch that case.
-  const preparePlaceholderImages = () => {
-    // Placeholder-first assets visibly occupy the image frame while the JPG
-    // resolves. A successful load removes the state; a failed load converts
-    // it to the permanent empty state.
-    document.querySelectorAll('img[data-placeholder-image="true"]').forEach((img) => {
-      const frame = img.closest(".arch-frame");
-      if (!frame) return;
-
-      if (img.complete && img.naturalWidth > 0) {
-        frame.classList.remove("is-empty", "is-placeholder-pending");
-        return;
-      }
-
-      frame.classList.add("is-placeholder-pending");
-      const hero = frame.closest(".page-hero");
-      if (hero) hero.classList.add("has-placeholder-image");
-      else frame.classList.remove("is-placeholder-pending");
-
-      if (img.dataset.placeholderListeners === "true") return;
-      img.dataset.placeholderListeners = "true";
-
-      img.addEventListener("load", () => {
-        frame.classList.remove("is-placeholder-pending", "is-empty");
-        if (hero) hero.classList.remove("has-placeholder-image");
-      }, { once: true });
-
-      img.addEventListener("error", () => {
-        frame.classList.remove("is-placeholder-pending");
-        if (hero) hero.classList.add("has-placeholder-image");
-        markImageUnavailable(img);
-      }, { once: true });
-    });
-  };
-
+  // This catches an eager image that failed before the listener was attached.
   const scanCompletedImages = () => {
     document.querySelectorAll('img[src^="/images/"]').forEach((img) => {
-      if (img.complete && img.naturalWidth === 0) markImageUnavailable(img);
+      if (img.complete && img.naturalWidth === 0) {
+        markImageUnavailable(img);
+      }
     });
   };
 
-  const rescanImages = () => {
-    preparePlaceholderImages();
+  const init = () => {
+    // Do NOT add a pending/placeholder state here.
+    // Existing images must remain visible while the browser loads them.
     scanCompletedImages();
-    window.setTimeout(() => {
-      preparePlaceholderImages();
-      scanCompletedImages();
-    }, 0);
-    window.setTimeout(() => {
-      preparePlaceholderImages();
-      scanCompletedImages();
-    }, 250);
   };
 
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", rescanImages, { once: true });
+    document.addEventListener("DOMContentLoaded", init, { once: true });
   } else {
-    rescanImages();
+    init();
   }
 
-  // A failed eager image can complete between DOM parsing and load. Scan again
-  // after the complete page load so the placeholder is deterministic.
   window.addEventListener("load", scanCompletedImages, { once: true });
 })();
 

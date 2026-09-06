@@ -1921,11 +1921,23 @@ button[aria-busy="true"] { cursor: wait; }
   }
 }
 
-/* v4.42 — Leadership portraits: keep visible team imagery rendered. */
-.leadership-principals{
-  content-visibility:visible!important;
-  contain-intrinsic-size:auto!important;
+/* v4.43 — authoritative image behavior
+   A placeholder is a failure state, never a loading state. */
+.arch-frame .arch-frame-placeholder{
+  display:none!important;
 }
-.leadership-principals .leader-card__image img{
+.arch-frame.is-empty .arch-frame-placeholder{
+  display:grid!important;
+}
+.arch-frame.is-placeholder-pending .arch-frame-placeholder{
+  display:none!important;
+}
+.arch-frame.is-placeholder-pending > img{
   display:block!important;
+}
+.page-hero .arch-frame.is-placeholder-pending::after{
+  display:block!important;
+}
+.page-hero .arch-frame.is-placeholder-pending{
+  /* Legacy class retained only for backward compatibility; it has no visual effect. */
 }
