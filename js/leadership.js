@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const imageFrame = modal.querySelector(".leadership-profile-modal__portrait");
   const name = modal.querySelector("[data-leadership-name]");
   const role = modal.querySelector("[data-leadership-role]");
+  const credentials = modal.querySelector("[data-leadership-credentials]");
   const bio = modal.querySelector("[data-leadership-bio]");
   const contactLinks = modal.querySelector("[data-leadership-contact-links]");
   const additional = modal.querySelector("[data-leadership-additional]");
@@ -18,8 +19,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // Only information actually supplied/approved is stored here. Missing fields are deliberately not invented.
   const profiles = {
     "olusola-adekanola": {
-      name: "Otunba Olusola Adekanola (FCA, FNIT)",
+      name: "Otunba Olusola Adekanola (FCA, FNIT, MNI, OFR)",
       role: "Global Chairman",
+      credentials: "FCA, FNIT, MNI, OFR",
       image: "/images/Otuba-Olusola-Adekanola.jpg",
       alt: "Olusola Adekanola, Global Chairman",
       bio: [
@@ -32,8 +34,9 @@ document.addEventListener("DOMContentLoaded", () => {
       ]
     },
     "julius-olugbade": {
-      name: "Dr. Julius Olugbade (PhD.)",
+      name: "Dr. Dr. Julius Olugbade",
       role: "Managing Partner/CEO",
+      credentials: "BSc, MBA, MSc, Mhil, PhD FCA",
       image: "/images/Dr-Julius-Olugbde.jpg",
       alt: "Dr. Julius Olugbade, Managing Partner/CEO",
       bio: ["Dr. Julius Ade Olugbade is a multidisciplinary accounting, audit, finance, tax, risk and compliance professional with over 20 years of professional and academic experience. He has held senior and managerial roles across banking, real estate, technology, aviation, pharmaceuticals and finance, including Chief Financial Officer, Group Head of Audit, Internal Control and Compliance, Manager of Finance and Domestic Operations, and Manager of Internal Audit, Risk and Compliance.", "His expertise includes internal control, auditing and investigation, fraud detection, financial reporting, financial analysis, forecasting, treasury and investment management, risk assessment, compliance and management reporting. He has also lectured accounting at Afe Babalola University and other institutions, supervised research, and advised organisations. He holds a PhD, MPhil and MSc in Accounting, an MBA in Finance and Banking, and a BSc in Accounting."],
@@ -42,6 +45,19 @@ document.addEventListener("DOMContentLoaded", () => {
         {type:"email", href:"mailto:julius.olugbade@oagroupng.com", external:false},
         {type:"website", href:"https://www.juliusolugbade.com", external:true}
       ]
+    },
+    "paul-bamidele-martins": {
+      name: "Dr. Paul Bamidele Martins",
+      role: "Executive Adviser",
+      credentials: "B.Sc, MBA, FIMC, CMC",
+      image: "/images/Bamidele-Martins.jpg",
+      alt: "Dr. Paul Bamidele Martins, Executive Adviser",
+      bio: [
+        "Paul Bamidele Martins is an Executive Consultant, Ahava Consulting Limited.",
+        "A visionary and results-oriented Management Consultant with about three decades of progressive experience in Strategy, Transformation, Operations, Project/Programme Management, Enterprise Development, Business Development,... in Nigeria, across West Africa, and United Kingdom.",
+        "A proven leader in supply chain advisory, and corporate strategy, with a demonstrated ability to drive impact through innovative consulting frameworks and operational excellence."
+      ],
+      contacts: []
     },
     "kehinde-oyeleke": {
       name: "Kehinde Oyeleke",
@@ -101,6 +117,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function render(profile) {
     name.textContent = profile.name;
+    if (credentials) {
+      credentials.textContent = profile.credentials || "";
+      credentials.hidden = !profile.credentials;
+    }
     role.textContent = profile.role;
     bio.replaceChildren();
     profile.bio.forEach((paragraph) => {

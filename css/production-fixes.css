@@ -1941,3 +1941,22 @@ button[aria-busy="true"] { cursor: wait; }
 .page-hero .arch-frame.is-placeholder-pending{
   /* Legacy class retained only for backward compatibility; it has no visual effect. */
 }
+/* v4.44 — Leadership credentials under names. */
+.leader-card__credentials{
+  margin: 0 0 8px;
+  font-family: Cinzel, serif;
+  font-size: 9px;
+  line-height: 1.5;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--oa-primary-700, #5C6C94);
+}
+.leadership-profile-modal__credentials{
+  margin: -2px 0 10px;
+  font-family: Cinzel, serif;
+  font-size: 10px;
+  line-height: 1.5;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--oa-primary-700, #5C6C94);
+}
