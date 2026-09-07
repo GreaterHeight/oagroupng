@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ]
     },
     "julius-olugbade": {
-      name: "Dr. Dr. Julius Olugbade",
+      name: "Dr. Julius Olugbade",
       role: "Managing Partner/CEO",
       credentials: "BSc, MBA, MSc, Mhil, PhD FCA",
       image: "/images/Dr-Julius-Olugbde.jpg",
