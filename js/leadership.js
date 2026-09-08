@@ -19,9 +19,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // Only information actually supplied/approved is stored here. Missing fields are deliberately not invented.
   const profiles = {
     "olusola-adekanola": {
-      name: "Otunba Olusola Adekanola (FCA, FNIT, MNI, OFR)",
+      name: "Otunba Olusola Adekanola (FCA, FCTI, mni)",
       role: "Global Chairman",
-      credentials: "FCA, FNIT, MNI, OFR",
+      credentials: "FCA, FCTI, mni",
       image: "/images/Otuba-Olusola-Adekanola.jpg",
       alt: "Olusola Adekanola, Global Chairman",
       bio: [
@@ -34,9 +34,9 @@ document.addEventListener("DOMContentLoaded", () => {
       ]
     },
     "julius-olugbade": {
-      name: "Dr. Julius Olugbade",
+      name: "Dr. Julius Olugbade PhD",
       role: "Managing Partner/CEO",
-      credentials: "BSc, MBA, MSc, Mhil, PhD FCA",
+      credentials: "BSc, MBA, MSc, Mhil, FCA, ACTI, ACPIN",
       image: "/images/Dr-Julius-Olugbde.jpg",
       alt: "Dr. Julius Olugbade, Managing Partner/CEO",
       bio: ["Dr. Julius Ade Olugbade is a multidisciplinary accounting, audit, finance, tax, risk and compliance professional with over 20 years of professional and academic experience. He has held senior and managerial roles across banking, real estate, technology, aviation, pharmaceuticals and finance, including Chief Financial Officer, Group Head of Audit, Internal Control and Compliance, Manager of Finance and Domestic Operations, and Manager of Internal Audit, Risk and Compliance.", "His expertise includes internal control, auditing and investigation, fraud detection, financial reporting, financial analysis, forecasting, treasury and investment management, risk assessment, compliance and management reporting. He has also lectured accounting at Afe Babalola University and other institutions, supervised research, and advised organisations. He holds a PhD, MPhil and MSc in Accounting, an MBA in Finance and Banking, and a BSc in Accounting."],
@@ -56,6 +56,29 @@ document.addEventListener("DOMContentLoaded", () => {
         "Paul Bamidele Martins is an Executive Consultant, Ahava Consulting Limited.",
         "A visionary and results-oriented Management Consultant with about three decades of progressive experience in Strategy, Transformation, Operations, Project/Programme Management, Enterprise Development, Business Development,... in Nigeria, across West Africa, and United Kingdom.",
         "A proven leader in supply chain advisory, and corporate strategy, with a demonstrated ability to drive impact through innovative consulting frameworks and operational excellence."
+      ],
+      contacts: []
+    },
+    "success-igboekwere": {
+      name: "Mr. Success Igboekwere",
+      role: "Group Admin/Operations",
+      image: "/images/Success-Igboekwere.jpg",
+      alt: "Mr. Success Igboekwere, Group Admin/Operations",
+      bio: [
+        "A computer scientist and top-flight ICT professional with relevant professional certifications and extensive experience in administration, operations management, systems coordination and organisational support.",
+        "He has served in the administrative capacities for more than a decade in the Group where he provides strategic coordination of the day-to-day activities of the organisation. In addition, as head of Admin and Operations in the Managing Partner’s office, he provides strategic leadership in administrative coordination, ICT and operational efficiency, contributing significantly to the Group’s growth, accountability and effective service delivery."
+      ],
+      contacts: []
+    },
+    "john-adeniyi-dairo": {
+      name: "John Adeniyi Dairo",
+      role: "Group Financial Director",
+      image: "/images/John.jpg",
+      alt: "John Adeniyi Dairo, Group Financial Director",
+      bio: [
+        "A fellow of Institute of Chartered Accountants of Nigeria (ICAN) and also an Associate member Chartered Institute of Taxation of Nigeria (CITN). He started his career with Babajide Odubanjo & Co, a firm of Chartered Accountants that specialises in Statutory Audits and training of personnel – as an audit trainee and later as an audit senior. He had a stint with Acclaims Home Savings and Loans Ltd before joining the firm of Olusola Adekanola & Co. He has over fifteen years’ experience in the practice of audit, accountancy, taxation and consultancy.",
+        "He has functioned at the management level of the firm since 1995 and served as head of various operational units of the firm in some states of the federation and until recently was senior principal consultant of our Osun operations.",
+        "John, who has flair for knowledge acquisition, is a Certified Information Systems Auditor and currently a student of Law at the National Open University of Nigeria. He presently heads the firm’s Southern Operation."
       ],
       contacts: []
     },

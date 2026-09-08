@@ -1,4 +1,8 @@
 
+/* v4.46 — Compact homepage hero headline letter spacing. */
+.hero__headline{letter-spacing:-0.025em;}
+
+
 /* Production hardening overrides */
 html{scroll-padding-top:var(--oa-header-height)}
 body{overflow-x:hidden}
