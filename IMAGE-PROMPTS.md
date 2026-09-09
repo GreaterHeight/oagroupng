@@ -563,3 +563,59 @@ Every image prompt in this document now includes an explicit master dimension.
 **Aspect ratio:** 16:10
 
 **Prompt:** Premium photorealistic African corporate editorial photograph representing alignment between purpose, values and mission. Show three senior professionals in thoughtful strategic conversation, communicating shared direction and alignment without literal symbols or diagrams. Modern Lagos corporate environment, sophisticated architecture, authentic professional interaction, natural light, restrained executive styling, realistic skin tones and elegant composition. No logos, no text, no watermark.
+
+## v4.47 — Product Portfolio Image Placement Map & Generation Prompts
+
+### Product image placement map
+| Product | Placement | Exact filename | Dimensions | Aspect |
+|---|---|---|---:|---:|
+| eCertMan® | Products portfolio card | `/images/ecertman-hero.jpg` | 2400×1350 | 16:9 |
+| eCertMan® | Detail-page hero | `/images/ecertman-hero.jpg` | 2400×1350 | 16:9 |
+| eCertMan® | Lifecycle / workflow section | `/images/ecertman-certificate-workflow.jpg` | 1600×1000 | 16:10 |
+| eCertMan® | Analytics section | `/images/ecertman-dashboard.jpg` | 1600×1000 | 16:10 |
+| eCertMan® | Security / trust section | `/images/ecertman-security.jpg` | 1600×1000 | 16:10 |
+| eCertMan® | Operations section | `/images/ecertman-operations.jpg` | 1600×1000 | 16:10 |
+| MatrimonyRoll™ | Products portfolio card | `/images/matrimonyroll-hero.jpg` | 2400×1350 | 16:9 |
+| MatrimonyRoll™ | Detail-page hero | `/images/matrimonyroll-hero.jpg` | 2400×1350 | 16:9 |
+| MatrimonyRoll™ | Applicant portal section | `/images/matrimonyroll-applicant-portal.jpg` | 1600×1000 | 16:10 |
+| MatrimonyRoll™ | Registry workflow section | `/images/matrimonyroll-registry-workflow.jpg` | 1600×1000 | 16:10 |
+| MatrimonyRoll™ | Certificate verification section | `/images/matrimonyroll-certificate-verification.jpg` | 1600×1000 | 16:10 |
+| MatrimonyRoll™ | Analytics section | `/images/matrimonyroll-analytics.jpg` | 1600×1000 | 16:10 |
+
+### Generation rules for all product imagery
+Create premium, photorealistic, editorial-quality Nigerian enterprise imagery suitable for an institutional corporate website. Use sophisticated architectural composition, realistic Nigerian people where people are shown, natural professional body language, restrained luxury, documentary realism, subtle depth of field and a credible contemporary African business environment. Use the OA Group visual atmosphere: slate/navy, soft neutral surfaces, restrained blue-grey tonal balance and clean premium lighting. Do not use GreaterHeight branding, GreaterHeight colours, GreaterHeight logos, fake company logos, watermarks or invented UI brand marks. Do not place readable brand names or fabricated statistics in the images. Interfaces may be shown as generic product UI only when specified below. Keep compositions text-safe where a website headline overlays the image.
+
+### eCertMan® prompts
+
+**`/images/ecertman-hero.jpg` — 2400×1350 JPG**
+A premium photorealistic 16:9 editorial hero image for an enterprise certificate management platform used by an examination body in Nigeria. Show a sophisticated modern examination-operations environment with a Nigerian professional administrator reviewing a secure digital certificate request workflow on a large monitor, with a subtle second screen showing a generic certificate lifecycle dashboard. Visual cues: authenticated request, verification, payment, processing and controlled fulfilment; no readable personal data. Contemporary Nigerian institutional architecture, polished but realistic, deep slate/navy environment with soft daylight, refined blue-grey accents, cinematic depth, ample negative space on the left for website headline copy. No logos, no watermark, no invented brand names, no readable UI text.
+
+**`/images/ecertman-certificate-workflow.jpg` — 1600×1000 JPG**
+Photorealistic enterprise workflow scene representing certificate request and fulfilment operations. A Nigerian examination-operations team works around a screen showing an abstract nine-stage certificate lifecycle as clean connected interface blocks without readable text. Include secure records, verification, payment, allocation and collection cues. Professional institutional setting, realistic technology, documentary corporate photography, slate and neutral palette, clean composition, no logos, no watermark, no readable personal information.
+
+**`/images/ecertman-dashboard.jpg` — 1600×1000 JPG**
+Photorealistic modern management intelligence dashboard environment for examination certificate operations. Show a Nigerian senior administrator reviewing generic operational, financial and service KPI visualisations on a large display. The UI must be generic and non-branded, with charts, status cards and workflow indicators but no readable words or fabricated numbers. Sophisticated boardroom/operations setting, premium blue-grey corporate palette, realistic lighting, crisp detail, no logos, no watermark.
+
+**`/images/ecertman-security.jpg` — 1600×1000 JPG**
+Photorealistic institutional cybersecurity and controlled certificate-record environment. Show a Nigerian technology/security professional reviewing secure access controls, audit events and encrypted document records on a monitor. Visualise role-based access, auditability and secure digital records without readable personal data. Modern enterprise operations centre, restrained slate/navy palette, subtle blue-grey light, realistic human proportions and technology, no hacker clichés, no logos, no watermark.
+
+**`/images/ecertman-operations.jpg` — 1600×1000 JPG**
+Photorealistic Nigerian examination service operations team in a modern office using an enterprise certificate-management platform. Show two or three professionals collaborating on processing queues and controlled fulfilment, with a subtle certificate/document workflow on screen. Professional, credible, efficient, human-centred, premium editorial corporate photography, no readable personal data, no logos, no watermark.
+
+### MatrimonyRoll™ prompts
+
+**`/images/matrimonyroll-hero.jpg` — 2400×1350 JPG**
+A premium photorealistic 16:9 editorial hero image for a Nigerian digital marriage registry and matrimony management platform. Show a modern Nigerian civic/registry environment with a professional registry officer and a couple interacting with a secure digital service portal. Subtle visual cues of application, document submission, appointment scheduling and certificate management. Warm human realism balanced with institutional professionalism; contemporary Nigerian setting; elegant slate/navy and neutral palette with refined blue-grey accents; ample negative space on the left for website headline copy. No wedding clichés, no fake logos, no readable names, no watermark, no invented brand marks.
+
+**`/images/matrimonyroll-applicant-portal.jpg` — 1600×1000 JPG**
+Photorealistic Nigerian couple using a smartphone and laptop to complete a digital marriage application in a refined contemporary home or service environment. Show a generic mobile-first application interface with forms, document upload and status-progress cues, but no readable text or personal information. Natural Nigerian representation, authentic body language, premium documentary photography, soft daylight, subtle blue-grey institutional palette, no logos or watermark.
+
+**`/images/matrimonyroll-registry-workflow.jpg` — 1600×1000 JPG**
+Photorealistic modern Nigerian marriage registry operations scene. Show registry professionals coordinating digital applications, document review, appointment scheduling and approval workflows on monitors. Include a subtle abstract workflow interface, no readable text or personal data. Contemporary civic office, credible government-service atmosphere, professional Nigerian staff, polished but realistic photography, restrained blue-grey palette, no logos, no watermark.
+
+**`/images/matrimonyroll-certificate-verification.jpg` — 1600×1000 JPG**
+Photorealistic institutional certificate-verification scene in Nigeria. Show an authorised verification professional reviewing a secure digital marriage certificate verification interface on a laptop, with a generic QR-code-like visual and certificate reference elements. No readable names, certificate numbers or personal data. Modern office, credible institutional environment, secure and trustworthy visual tone, subtle slate/navy and neutral palette, no logos, no watermark.
+
+**`/images/matrimonyroll-analytics.jpg` — 1600×1000 JPG**
+Photorealistic management intelligence scene inside a Nigerian marriage registry. Show a senior administrator reviewing generic dashboards for applications, marriages, revenue, processing times, certificate activity and service performance. Interface is sophisticated but non-branded, with charts and abstract KPI cards and no readable text or fabricated figures. Contemporary institutional setting, premium blue-grey palette, realistic lighting, no logos, no watermark.
+
