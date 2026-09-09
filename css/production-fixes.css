@@ -1988,7 +1988,9 @@ button[aria-busy="true"] { cursor: wait; }
 }
 .product-detail-hero__grid{
   position:static !important;
-  width:100%;
+  width:min(var(--oa-max),calc(100% - 2*var(--oa-gutter))) !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
   min-height:560px;
   display:flex;
   align-items:center;
