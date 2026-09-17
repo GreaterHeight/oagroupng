@@ -82,6 +82,19 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
       contacts: []
     },
+    "udon-joel-nkeki": {
+      name: "Nkeki Joel Udon",
+      role: "Head, Henrisol Properties Limited",
+      image: "/images/Udon-Joel.jpg",
+      alt: "Nkeki Joel Udon, Head, Henrisol Properties Limited",
+      bio: [
+        "Nkeki Joel Udon is a graduate of Accounting from the University of Benin (UNIBEN) and a member of the Certified Institute of Auctioneers, Nigeria. He has built a distinguished career spanning over 20 years with OA Group, where he has served in various capacities and gained broad experience across several areas of business and financial operations.",
+        "During his tenure in the Business Development Unit, Mr. Udon was actively involved in major liquidation and asset-disposal assignments, including the liquidation of NAFCON, NNMC, NITEL Trustees, and HHL. These engagements provided him with extensive exposure to asset valuation, recovery, disposal processes, stakeholder management, and the financial and administrative aspects of corporate liquidation.",
+        "He has also participated in revenue-drive initiatives and audit assignments for various government agencies and organizations, contributing to efforts aimed at improving revenue collection, identifying revenue leakages, strengthening financial controls, and enhancing operational efficiency.",
+        "With his background in accounting, business development, auditing, revenue generation, and auctioneering, he brings a combination of technical knowledge and practical experience to professional assignments. His over two decades of industry experience have equipped him with valuable expertise in managing complex assignments, working with diverse stakeholders, and supporting organizations in achieving their financial and operational objectives."
+      ],
+      contacts: []
+    },
     "kehinde-oyeleke": {
       name: "Kehinde Oyeleke",
       role: "Executive Adviser",
