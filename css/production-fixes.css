@@ -2139,3 +2139,77 @@ button[aria-busy="true"] { cursor: wait; }
   .leadership-profile-modal__content{padding:32px 18px 42px;}
   .leadership-profile-modal__content h2{font-size:clamp(34px,10vw,42px);}
 }
+
+/* v4.54 — Mobile leadership modal containment and readability repair.
+   The profile dialog must own the complete mobile viewport so the underlying
+   leadership page, imagery and floating utilities cannot show through it. */
+@media (max-width:900px){
+  .leadership-profile-modal{
+    position:fixed;
+    inset:0;
+    display:none;
+    padding:0!important;
+    align-items:stretch;
+    justify-content:stretch;
+    overflow:hidden;
+    background:rgba(18,22,31,.78);
+    isolation:isolate;
+  }
+  .leadership-profile-modal.is-open{display:block;}
+  .leadership-profile-modal__dialog{
+    position:relative;
+    z-index:1;
+    display:flex!important;
+    flex-direction:column;
+    width:100%!important;
+    height:100%!important;
+    min-height:100%!important;
+    max-height:none!important;
+    margin:0;
+    overflow-y:auto!important;
+    overflow-x:hidden!important;
+    background:#fff!important;
+    color:#111;
+    box-sizing:border-box;
+    overscroll-behavior:contain;
+  }
+  .leadership-profile-modal__aside,
+  .leadership-profile-modal__content{
+    position:relative;
+    z-index:1;
+    flex:0 0 auto;
+    width:100%!important;
+    max-width:none!important;
+    min-width:0!important;
+    box-sizing:border-box;
+    background:#fff!important;
+    opacity:1!important;
+    visibility:visible!important;
+  }
+  .leadership-profile-modal__aside{background:#f2f2f1!important;}
+  .leadership-profile-modal__content{overflow:visible!important;}
+  .leadership-profile-modal__close{
+    position:fixed!important;
+    top:14px!important;
+    right:14px!important;
+    z-index:20!important;
+    width:48px;
+    height:48px;
+    background:#fff!important;
+    color:#111!important;
+    box-shadow:0 4px 18px rgba(0,0,0,.12);
+  }
+  .leadership-profile-modal__content h2,
+  .leadership-profile-modal__bio,
+  .leadership-profile-modal__role,
+  .leadership-profile-modal__label{
+    opacity:1!important;
+    visibility:visible!important;
+  }
+}
+@media (max-width:560px){
+  .leadership-profile-modal__aside{padding:20px 16px 28px!important;}
+  .leadership-profile-modal__content{padding:34px 18px 46px!important;}
+  .leadership-profile-modal__content h2{font-size:clamp(34px,10vw,42px)!important;line-height:1.02!important;}
+  .leadership-profile-modal__bio{font-size:16px!important;line-height:1.75!important;overflow-wrap:break-word!important;}
+}
