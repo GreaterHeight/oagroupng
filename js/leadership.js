@@ -186,7 +186,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   function open(trigger) {
-    const profile = profiles[trigger.dataset.profileId];
+    const profileId = String(trigger.dataset.profileId || "").trim().toLowerCase();
+    const profile = profiles[profileId];
     if (!profile) return;
     lastTrigger = trigger;
     render(profile);
@@ -205,7 +206,14 @@ document.addEventListener("DOMContentLoaded", () => {
     if (lastTrigger) lastTrigger.focus();
   }
 
-  triggers.forEach((trigger) => trigger.addEventListener("click", () => open(trigger)));
+  // Use delegated activation so every profile trigger, including dynamically
+  // updated cards, follows the same modal path. Normalize the id before lookup.
+  document.addEventListener("click", (event) => {
+    const trigger = event.target.closest("[data-leadership-open]");
+    if (!trigger || !document.documentElement.contains(trigger)) return;
+    event.preventDefault();
+    open(trigger);
+  });
   close.addEventListener("click", shut);
   modal.addEventListener("click", (event) => {
     if (event.target === modal) shut();
