@@ -2087,3 +2087,55 @@ button[aria-busy="true"] { cursor: wait; }
   .product-detail-hero__media::after{background:rgba(7,17,38,.76)}
   .product-detail-hero h1{font-size:clamp(54px,16vw,82px)}
 }
+
+/* v4.53 — Mobile leadership profile modal: prevent horizontal clipping. */
+@media (max-width:900px){
+  .leadership-profile-modal{
+    align-items:stretch;
+    justify-content:stretch;
+    padding:0;
+    overflow-y:auto;
+    overflow-x:hidden;
+  }
+  .leadership-profile-modal__dialog{
+    display:grid;
+    grid-template-columns:minmax(0,1fr)!important;
+    width:100%!important;
+    min-width:0!important;
+    height:auto!important;
+    min-height:100dvh;
+    max-height:none!important;
+    overflow:visible!important;
+    box-sizing:border-box;
+  }
+  .leadership-profile-modal__aside,
+  .leadership-profile-modal__content{
+    width:100%;
+    min-width:0;
+    max-width:100%;
+    box-sizing:border-box;
+    overflow:visible;
+  }
+  .leadership-profile-modal__aside{
+    padding:24px 20px 28px;
+  }
+  .leadership-profile-modal__content{
+    padding:36px 24px 48px;
+    overflow-wrap:anywhere;
+  }
+  .leadership-profile-modal__content h2{
+    max-width:100%;
+    margin-right:48px;
+    overflow-wrap:anywhere;
+  }
+  .leadership-profile-modal__bio{
+    max-width:100%;
+    overflow-wrap:anywhere;
+    word-break:normal;
+  }
+}
+@media (max-width:560px){
+  .leadership-profile-modal__aside{padding:20px 16px 24px;}
+  .leadership-profile-modal__content{padding:32px 18px 42px;}
+  .leadership-profile-modal__content h2{font-size:clamp(34px,10vw,42px);}
+}
